@@ -194,6 +194,9 @@
         height: auto;
         border: 1px solid var(--border);
         border-radius: 8px;
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-user-select: none;
       }
       
       .figure-link {
@@ -362,6 +365,8 @@
             src="images/carbonate_depth_profile.png"
             alt="Static depth profiles of carbonate minerals in sediment core GeoB1515-1"
             loading="lazy"
+            oncontextmenu="return false;"
+            draggable="false"
           >
         </a>
       
