@@ -1,15 +1,13 @@
 :root {
   --navy: #102b3f;
-  --navy-light: #173b50;
-  --teal: #55c6bd;
+  --teal: #168b88;
   --background: #f5f8fa;
   --text: #263746;
   --muted: #617381;
+  --border: #e2eaf0;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -22,7 +20,7 @@ body {
 header {
   background: var(--navy);
   color: white;
-  padding: 24px 8%;
+  padding: 20px 8%;
 }
 
 nav {
@@ -31,39 +29,29 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 17px;
 }
 
 nav a {
   color: #dce8ee;
   text-decoration: none;
-  margin-left: 24px;
   font-size: 14px;
 }
 
-nav a:hover {
-  color: var(--teal);
-}
+nav a:hover { color: #55c6bd; }
 
 .hero {
   background: linear-gradient(135deg, #102b3f, #20566a);
   color: white;
-  padding: 110px 8% 120px;
+  padding: 75px 8%;
 }
 
-.hero-inner {
+.hero-inner, main {
   max-width: 1100px;
   margin: auto;
 }
 
 .eyebrow {
-  color: var(--teal);
+  color: #55c6bd;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
@@ -71,159 +59,218 @@ nav a:hover {
 }
 
 h1 {
-  font-size: clamp(36px, 6vw, 64px);
-  line-height: 1.15;
-  margin: 18px 0 24px;
-  max-width: 800px;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.2;
+  margin: 15px 0 20px;
 }
 
 .hero p {
-  max-width: 650px;
+  max-width: 760px;
   color: #d1e1e9;
-  font-size: 18px;
+  font-size: 17px;
 }
 
-.button {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 12px 22px;
-  background: var(--teal);
-  color: var(--navy);
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 700;
-}
+main { padding: 60px 25px; }
 
-.button:hover {
-  background: #80ddd4;
-}
-
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 75px 8%;
-}
-
-section {
-  margin-bottom: 85px;
-}
+section { margin-bottom: 70px; }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   color: var(--navy);
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
-.section-intro {
-  color: var(--muted);
-  max-width: 750px;
-}
+h3 { color: var(--navy); }
 
-.project-card {
-  background: white;
-  border: 1px solid #e2eaf0;
-  border-radius: 12px;
-  padding: 35px;
+.metadata {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
   margin-top: 30px;
-  box-shadow: 0 8px 24px rgba(16,43,63,0.05);
 }
 
-.project-label {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #168b88;
-  font-weight: 700;
+.metadata div {
+  background: white;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
-.project-card h3 {
-  font-size: 25px;
-  margin: 12px 0;
+.metadata strong {
+  display: block;
+  font-size: 20px;
   color: var(--navy);
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 22px;
-}
-
-.tag {
-  background: #eaf4f5;
-  color: #256a70;
-  padding: 5px 12px;
-  border-radius: 20px;
+.metadata span {
   font-size: 12px;
-  font-weight: 600;
+  color: var(--muted);
 }
 
-.project-link {
-  display: inline-block;
+.chart-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
   margin-top: 25px;
-  margin-right: 28px;
-  color: #087f83;
-  font-weight: 700;
-  text-decoration: none;
 }
 
-.project-link:hover {
-  text-decoration: underline;
+select {
+  padding: 10px 15px;
+  border: 1px solid #ccd8df;
+  border-radius: 5px;
+  font-size: 15px;
+  background: white;
 }
 
-.skills {
+.note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.methods {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+a { color: var(--teal); }
+
+footer {
+  background: var(--navy);
+  color: #c9d8df;
+  padding: 30px;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer a { color: #55c6bd; }
+
+@media (max-width: 700px) {
+  .metadata { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding: 55px 8%; }
+}
+
+.observation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 30px;
 }
 
-.skill-card {
+.observation-card {
   background: white;
-  padding: 25px;
-  border: 1px solid #e2eaf0;
+  border: 1px solid var(--border);
   border-radius: 10px;
+  padding: 25px;
 }
 
-.skill-card h3 {
-  color: var(--navy);
-  margin-top: 0;
-  font-size: 18px;
-}
-
-footer {
-  background: var(--navy);
-  color: #c9d8df;
-  padding: 35px 8%;
-  text-align: center;
+.observation-number {
   font-size: 13px;
-}
-
-footer a {
+  font-weight: 700;
   color: var(--teal);
-  text-decoration: none;
+  letter-spacing: 1px;
 }
 
-@media (max-width: 700px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.observation-card h3 {
+  font-size: 19px;
+  line-height: 1.4;
+  margin: 12px 0;
+}
 
-  nav a {
-    margin-left: 0;
-    margin-right: 15px;
-  }
+.observation-card p {
+  font-size: 14px;
+}
 
-  .hero {
-    padding: 75px 8%;
-  }
-
-  .skills {
+@media (max-width: 800px) {
+  .observation-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .project-card {
-    padding: 24px;
-  }
+/* =====================================
+   Carbonate mineral distribution figure
+   ===================================== */
+
+.result-figure {
+  width: 100%;
+  max-width: 600px;
+  margin: 35px auto;
+}
+
+.figure-link {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.result-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.result-figure figcaption {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+
+/* =====================================
+   XRD data access modal
+   ===================================== */
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(8, 20, 32, 0.78);
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  padding: 36px;
+  background: white;
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-note {
+  font-size: 13px;
+  color: var(--muted);
 }
