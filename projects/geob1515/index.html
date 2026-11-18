@@ -219,6 +219,92 @@
         scroll-margin-top: 25px;
       }
 
+      /* Make figures clickable without button styling */
+      
+      .figure-link {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font: inherit;
+      }
+      
+      .figure-link img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+      .figure-link:focus-visible {
+        outline: 3px solid var(--teal);
+        outline-offset: 4px;
+      }
+      
+      /* Modal background */
+      
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(10, 25, 40, 0.65);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      
+      /* Keep modal hidden until opened */
+      
+      .modal[hidden] {
+        display: none;
+      }
+      
+      /* Floating modal window */
+      
+      .modal-content {
+        position: relative;
+        background: white;
+        border-radius: 12px;
+        padding: 40px;
+        width: 100%;
+        max-width: 480px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      }
+      
+      .modal-content h2 {
+        margin-top: 0;
+        color: var(--navy);
+        font-size: 22px;
+      }
+      
+      .modal-content p {
+        margin-bottom: 15px;
+      }
+      
+      .modal-note {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      
+      /* Close button */
+      
+      .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        background: none;
+        border: none;
+        color: var(--muted);
+        font-size: 28px;
+        cursor: pointer;
+      }
+      
+      .modal-close:hover {
+        color: var(--navy);
+      }
+    
   </style>
 </head>
 
@@ -356,11 +442,12 @@
       </p>
       
       <figure class="result-figure">
-        <a
-          href="#data-access"
-          class="figure-link"
-          aria-label="View information about accessing the XRD dataset"
-        >
+          <button
+            type="button"
+            class="figure-link"
+            onclick="openDataModal()"
+            aria-label="View XRD data access information"
+          >
           <img
             src="images/carbonate_depth_profile.png"
             alt="Static depth profiles of carbonate minerals in sediment core GeoB1515-1"
@@ -368,7 +455,7 @@
             oncontextmenu="return false;"
             draggable="false"
           >
-        </a>
+        </button>
       
         <figcaption>
           Carbonate mineral distribution in sediment core GeoB1515-1.
@@ -449,6 +536,96 @@
       Marine Geosciences | University of Bremen
     </div>
   </footer>
+
+  <div
+    id="dataModal"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    hidden
+  >
+    <div class="modal-content">
+      <button
+        type="button"
+        class="modal-close"
+        onclick="closeDataModal()"
+        aria-label="Close dialog"
+      >
+        &times;
+      </button>
+  
+      <h2 id="modalTitle">XRD Data Access</h2>
+  
+      <p>
+        Please contact Dr. Christoph Vogt,
+        Faculty of Geosciences (FB05),
+        University of Bremen,
+        for access to the full dataset.
+      </p>
+  
+      <p class="modal-note">
+        The quantitative XRD dataset is currently unpublished.
+      </p>
+    </div>
+  </div>
+   
+  <script>
+    const dataModal = document.getElementById("dataModal");
+    let previousFocus = null;
+  
+    function openDataModal() {
+      previousFocus = document.activeElement;
+      dataModal.hidden = false;
+      dataModal.querySelector(".modal-close").focus();
+    }
+  
+    function closeDataModal() {
+      dataModal.hidden = true;
+  
+      if (previousFocus) {
+        previousFocus.focus();
+      }
+    }
+  
+    // Close when clicking outside the floating window
+    dataModal.addEventListener("click", function(event) {
+      if (event.target === dataModal) {
+        closeDataModal();
+      }
+    });
+  
+    // Close with Escape; keep keyboard focus inside the dialog
+    document.addEventListener("keydown", function(event) {
+      if (dataModal.hidden) return;
+  
+      if (event.key === "Escape") {
+        closeDataModal();
+        return;
+      }
+  
+      if (event.key === "Tab") {
+        const controls = Array.from(
+          dataModal.querySelectorAll(
+            'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
+          )
+        );
+  
+        if (!controls.length) return;
+  
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+  
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
