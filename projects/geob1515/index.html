@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GeoB1515-1 | Marine Sediment Core Analysis</title>
+
+  <style>
+    :root {
+      --navy: #14263d;
+      --teal: #087f83;
+      --background: #f5f8fa;
+      --text: #243746;
+      --muted: #647687;
+      --border: #dfe8ed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      background: var(--navy);
+      padding: 18px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 55px 0 75px;
+    }
+
+    .eyebrow {
+      color: #8bd3d2;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    header h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    header p {
+      color: #c8d9e4;
+      max-width: 750px;
+      font-size: 17px;
+    }
+
+    main {
+      padding-top: 55px;
+      padding-bottom: 70px;
+    }
+
+    section {
+      margin-bottom: 65px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: var(--navy);
+    }
+
+    p {
+      max-width: 850px;
+    }
+
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 28px;
+    }
+
+    .metadata span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+
+    .figure-placeholder {
+      background: white;
+      border: 1px dashed #b8c8d1;
+      border-radius: 10px;
+      padding: 75px 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .method-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .method-card h3 {
+      margin-top: 0;
+    }
+
+    .data-notice {
+      background: white;
+      border-left: 4px solid var(--teal);
+      padding: 25px 30px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .citation {
+      font-size: 14px;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/">← Back to Portfolio</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <div class="eyebrow">Marine Geoscience Research</div>
+
+      <h1>Carbonate Mineralogy of Sediment Core GeoB1515-1</h1>
+
+      <p>
+        Investigating mineralogical variability in marine sediments
+        from the western equatorial Atlantic using X-ray diffraction,
+        scientific programming, and geospatial analysis.
+      </p>
+
+      <div class="metadata">
+        <span>Western Equatorial Atlantic</span>
+        <span>Ceará Rise</span>
+        <span>XRD Mineralogy</span>
+        <span>University of Bremen</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>Project Overview</h2>
+
+      <p>
+        Marine sediment cores preserve records of changing
+        environmental conditions through time. Variations in
+        carbonate mineralogy can provide information about
+        sediment composition, carbonate preservation, and
+        potential paleoceanographic processes.
+      </p>
+
+      <p>
+        This project examines the carbonate mineral assemblage
+        of sediment core GeoB1515-1, recovered from the
+        western equatorial Atlantic near the Ceará Rise.
+      </p>
+
+      <p>
+        The investigation focuses on the identification and
+        distribution of carbonate minerals, including calcite,
+        aragonite, and other carbonate phases. Mineralogical
+        observations are considered alongside sedimentological
+        and paleoceanographic context.
+      </p>
+    </section>
+
+    <section>
+      <h2>Study Area</h2>
+
+      <p>
+        Core GeoB1515-1 was recovered from the western
+        equatorial Atlantic near the Ceará Rise, in a region
+        influenced by sediment transport and oceanographic
+        processes associated with the Amazon margin.
+      </p>
+
+      <div class="figure-placeholder">
+        Study-area bathymetry map
+        <p style="margin: 8px auto 0;">
+          QGIS figure to be added
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Methods</h2>
+
+      <div class="method-grid">
+
+        <div class="method-card">
+          <h3>X-ray Diffraction</h3>
+          <p>
+            Examination of quantitative XRD mineral assemblage
+            results to investigate the distribution of
+            carbonate phases within the sediment core.
+          </p>
+        </div>
+
+        <div class="method-card">
+          <h3>Python Analysis</h3>
+          <p>
+            Scientific data processing and visualization
+            using Python to investigate mineralogical
+            patterns with sediment depth.
+          </p>
+        </div>
+
+        <div class="method-card">
+          <h3>Geospatial Mapping</h3>
+          <p>
+            Bathymetric mapping in QGIS to establish the
+            geographic and geological context of the
+            sediment core location.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Data Availability</h2>
+
+      <div class="data-notice">
+        <p>
+          The quantitative XRD dataset used in this project
+          is unpublished and is not available for public
+          download.
+        </p>
+
+        <p>
+          Please contact Dr. Christoph Vogt, FB05&amp;
+          University of Bremen for access to the full dataset!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data Attribution</h2>
+
+      <p class="citation">
+        Vogt, Chr. (2026): QXRD data, full pattern
+        quantification of mineral assemblage data for Core
+        GeoB1515-4, unpublished data set by Dr. Christoph Vogt,
+        Geosciences University of Bremen. To be submitted to
+        Pangaea Data Publisher for Earth &amp; Environmental
+        Science, www.pangaea.de
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      Marine Geosciences | University of Bremen
+    </div>
+  </footer>
+
+</body>
+</html>
