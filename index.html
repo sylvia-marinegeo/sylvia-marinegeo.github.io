@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marine Geoscience | Research Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #14263d;
+      --teal: #087f83;
+      --background: #f5f8fa;
+      --text: #243746;
+      --muted: #647687;
+      --border: #dfe8ed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 80px 24px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    header h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+      max-width: 750px;
+      margin: 0 0 20px;
+    }
+
+    header p {
+      max-width: 680px;
+      color: #c8d9e4;
+      font-size: 17px;
+    }
+
+    main {
+      padding: 55px 24px;
+    }
+
+    section {
+      margin-bottom: 65px;
+    }
+
+    h2 {
+      font-size: 25px;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .project-card h3 {
+      font-size: 22px;
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 28px;
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .methods {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .method-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .method-card h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      .methods {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Exploring the ocean through geology and data</h1>
+
+      <p>
+        Marine geoscience research combining sedimentology,
+        mineralogical analysis, geospatial mapping, and
+        scientific programming.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>Featured Research</h2>
+
+      <div class="project-card">
+        <h3>GeoB1515-1 | Marine Sediment Core Analysis</h3>
+
+        <p>
+          Investigation of carbonate mineralogy and sediment
+          composition in the western equatorial Atlantic.
+          The project combines X-ray diffraction methodology,
+          Python-based analysis, and QGIS mapping to explore
+          sedimentary variability and its potential
+          paleoceanographic significance.
+        </p>
+
+        <p>
+          The project is being prepared for public presentation
+          while the underlying XRD dataset remains unpublished.
+        </p>
+
+        <a class="project-link"
+           href="/projects/geob1515/">
+          View Project →
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Methods &amp; Tools</h2>
+
+      <div class="methods">
+
+        <div class="method-card">
+          <h3>Mineralogical Analysis</h3>
+          <p>
+            X-ray diffraction, carbonate mineral identification,
+            and sediment composition.
+          </p>
+        </div>
+
+        <div class="method-card">
+          <h3>Scientific Programming</h3>
+          <p>
+            Python, Jupyter notebooks, data processing,
+            and scientific visualization.
+          </p>
+        </div>
+
+        <div class="method-card">
+          <h3>Geospatial Analysis</h3>
+          <p>
+            QGIS mapping, bathymetric visualization,
+            and marine geographic data.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Marine Geosciences | University of Bremen
+  </footer>
+
+</body>
+</html>
