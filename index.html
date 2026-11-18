@@ -1,202 +1,349 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marine geoscience research portfolio featuring sediment mineralogy, scientific computing, and oceanographic data analysis.">
   <title>Marine Geoscience | Research Portfolio</title>
 
   <style>
     :root {
-      --navy: #101c2b;
-      --teal: #5dd6d0;
-      --background: #0b1420;
-      --surface: #172638;
-      --text: #e2eaf0;
-      --muted: #a3b4c4;
-      --border: #304357;
+      --navy: #102b3f;
+      --navy-light: #173b50;
+      --teal: #55c6bd;
+      --background: #f5f8fa;
+      --text: #263746;
+      --muted: #617381;
     }
-  
+
     * {
       box-sizing: border-box;
     }
-  
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--background);
       color: var(--text);
       line-height: 1.7;
     }
-  
+
     header {
       background: var(--navy);
       color: white;
-      padding: 80px 24px;
+      padding: 24px 8%;
     }
-  
-    .container {
-      max-width: 1050px;
+
+    nav {
+      max-width: 1100px;
       margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
-  
-    header h1 {
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.2;
-      max-width: 750px;
-      margin: 0 0 20px;
-    }
-  
-    header p {
-      max-width: 680px;
-      color: #c8d9e4;
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 1px;
       font-size: 17px;
     }
-  
+
+    nav a {
+      color: #dce8ee;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #102b3f, #20566a);
+      color: white;
+      padding: 110px 8% 120px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.15;
+      margin: 18px 0 24px;
+      max-width: 800px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #d1e1e9;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 22px;
+      background: var(--teal);
+      color: var(--navy);
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: #80ddd4;
+    }
+
     main {
-      padding: 55px 24px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 8%;
     }
-  
+
     section {
-      margin-bottom: 65px;
+      margin-bottom: 85px;
     }
-  
+
     h2 {
-      font-size: 25px;
-      color: var(--text);
-      margin-bottom: 20px;
+      font-size: 30px;
+      color: var(--navy);
+      margin-bottom: 18px;
     }
-  
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 750px;
+    }
+
     .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: white;
+      border: 1px solid #e2eaf0;
       border-radius: 12px;
-      padding: 32px;
+      padding: 35px;
+      margin-top: 30px;
+      box-shadow: 0 8px 24px rgba(16,43,63,0.05);
     }
-  
+
+    .project-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #168b88;
+      font-weight: 700;
+    }
+
     .project-card h3 {
-      font-size: 22px;
-      margin-top: 0;
-      color: var(--text);
+      font-size: 25px;
+      margin: 12px 0;
+      color: var(--navy);
     }
-  
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      background: #eaf4f5;
+      color: #256a70;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
     .project-link {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 25px;
       margin-right: 28px;
-      color: var(--teal);
+      color: #087f83;
       font-weight: 700;
       text-decoration: none;
     }
-  
+    
     .project-link:hover {
       text-decoration: underline;
     }
-  
-    .methods {
+
+    .skills {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-    }
-  
-    .method-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px;
-    }
-  
-    .method-card h3 {
-      color: var(--text);
-      margin-top: 0;
-    }
-  
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 30px 24px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-  
-    @media (max-width: 750px) {
-      .methods {
-        grid-template-columns: 1fr;
-      }
+      margin-top: 30px;
     }
 
+    .skill-card {
+      background: white;
+      padding: 25px;
+      border: 1px solid #e2eaf0;
+      border-radius: 10px;
+    }
+
+    .skill-card h3 {
+      color: var(--navy);
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #c9d8df;
+      padding: 35px 8%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .hero {
+        padding: 75px 8%;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        padding: 24px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <header>
-    <div class="container">
-      <h1>Exploring the ocean through geology and data</h1>
-
-      <p>
-        Marine geoscience research combining sedimentology,
-        mineralogical analysis, geospatial mapping, and
-        scientific programming.
-      </p>
-    </div>
+    <nav>
+      <div class="logo">MARINE GEOSCIENCE</div>
+      <div>
+        <a href="#research">Research</a>
+        <a href="#methods">Methods</a>
+        <a href="https://github.com/sylvia-marinegeo"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="container">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Research Portfolio</div>
+      <h1>Exploring the ocean through geology and data.</h1>
+      <p>
+        Marine geoscience research combining sediment mineralogy,
+        paleoceanography, geospatial analysis, and scientific computing.
+      </p>
+      <a class="button" href="#research">Explore Research</a>
+    </div>
+  </div>
 
-    <section>
-      <h2>Featured Research</h2>
+  <main>
+
+    <section id="research">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Research Projects</h2>
+      <p class="section-intro">
+        Scientific investigations integrating laboratory measurements,
+        geospatial data, and computational analysis to better understand
+        marine environments.
+      </p>
 
       <div class="project-card">
-        <h3>GeoB1515-1 | Marine Sediment Core Analysis</h3>
+        <div class="project-label">Featured Project · Ongoing Research</div>
+        <h3>GeoB1515-1: Carbonate Mineralogy of Equatorial Atlantic Sediments</h3>
 
         <p>
-          Investigation of carbonate mineralogy and sediment
-          composition in the western equatorial Atlantic.
-          The project combines X-ray diffraction methodology,
-          Python-based analysis, and QGIS mapping to explore
-          sedimentary variability and its potential
+          An investigation of carbonate mineral assemblages in a
+          6.58-meter marine sediment core from the western equatorial
+          Atlantic Ocean.
+        </p>
+
+        <p>
+          Using X-ray diffraction data, Python-based analysis,
+          and geospatial visualization, this project examines
+          changes in sediment mineralogy and their potential
           paleoceanographic significance.
         </p>
 
-        <p>
-          The project is being prepared for public presentation
-          while the underlying XRD dataset remains unpublished.
-        </p>
+        <div class="tags">
+          <span class="tag">X-ray Diffraction</span>
+          <span class="tag">Python</span>
+          <span class="tag">Paleoceanography</span>
+          <span class="tag">QGIS</span>
+          <span class="tag">Data Visualization</span>
+        </div>
 
-        <a class="project-link"
-           href="/projects/geob1515/">
-          View Project →
+        <a href="/projects/geob1515/" class="project-link">
+          View Interactive Project →
+        </a>
+        
+        <a href="https://github.com/sylvia-marinegeo/sedimentcore"
+           class="project-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Code on GitHub →
         </a>
       </div>
     </section>
 
-    <section>
-      <h2>Methods &amp; Tools</h2>
+    <section id="methods">
+      <div class="eyebrow">Technical Approach</div>
+      <h2>Research Methods & Tools</h2>
 
-      <div class="methods">
+      <div class="skills">
 
-        <div class="method-card">
-          <h3>Mineralogical Analysis</h3>
+        <div class="skill-card">
+          <h3>Marine Geoscience</h3>
           <p>
-            X-ray diffraction, carbonate mineral identification,
-            and sediment composition.
+            Sediment mineralogy, X-ray diffraction,
+            carbonate geochemistry, and paleoceanographic
+            interpretation.
           </p>
         </div>
 
-        <div class="method-card">
-          <h3>Scientific Programming</h3>
+        <div class="skill-card">
+          <h3>Scientific Computing</h3>
           <p>
             Python, Jupyter notebooks, data processing,
-            and scientific visualization.
+            statistical analysis, and interactive
+            scientific visualization.
           </p>
         </div>
 
-        <div class="method-card">
+        <div class="skill-card">
           <h3>Geospatial Analysis</h3>
           <p>
-            QGIS mapping, bathymetric visualization,
-            and marine geographic data.
+            QGIS, bathymetric mapping, geographic
+            data visualization, and marine
+            spatial analysis.
           </p>
         </div>
 
@@ -206,7 +353,12 @@
   </main>
 
   <footer>
-    Marine Geosciences | University of Bremen
+    <p>
+      Marine Geoscience Research Portfolio ·
+      <a href="https://github.com/sylvia-marinegeo">
+        GitHub
+      </a>
+    </p>
   </footer>
 
 </body>
