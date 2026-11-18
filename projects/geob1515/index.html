@@ -164,6 +164,24 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .study-map {
+        margin: 30px 0;
+      }
+      
+      .study-map img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      
+      .study-map figcaption {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
   </style>
 </head>
 
@@ -234,12 +252,17 @@
         processes associated with the Amazon margin.
       </p>
 
-      <div class="figure-placeholder">
-        Study-area bathymetry map
-        <p style="margin: 8px auto 0;">
-          QGIS figure to be added
-        </p>
-      </div>
+      <figure class="study-map">
+        <img
+          src="images/study_area.png"
+          alt="Bathymetric map showing the location of sediment core GeoB1515-1 near the Ceará Rise"
+        >
+        <figcaption>
+          Study area and location of sediment core GeoB1515-1
+          in the western equatorial Atlantic.
+          Bathymetric visualization produced in QGIS.
+        </figcaption>
+      </figure>
     </section>
 
     <section>
