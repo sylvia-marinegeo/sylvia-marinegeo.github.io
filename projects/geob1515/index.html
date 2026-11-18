@@ -182,6 +182,40 @@
         font-size: 14px;
         text-align: center;
       }
+
+      .result-figure {
+        max-width: 800px;
+        margin: 35px auto;
+      }
+      
+      .result-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+      
+      .figure-link {
+        display: block;
+        cursor: pointer;
+      }
+      
+      .figure-link:hover img {
+        border-color: var(--teal);
+      }
+      
+      .result-figure figcaption {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+      
+      #data-access {
+        scroll-margin-top: 25px;
+      }
+
   </style>
 </head>
 
@@ -317,7 +351,28 @@
         changes in mineral composition and identify intervals
         for further examination.
       </p>
-    
+      
+      <figure class="result-figure">
+        <a
+          href="#data-access"
+          class="figure-link"
+          aria-label="View information about accessing the XRD dataset"
+        >
+          <img
+            src="images/carbonate_depth_profile.png"
+            alt="Static depth profiles of carbonate minerals in sediment core GeoB1515-1"
+            loading="lazy"
+          >
+        </a>
+      
+        <figcaption>
+          Carbonate mineral distribution in sediment core GeoB1515-1.
+          Quantitative XRD data: Dr. Christoph Vogt,
+          University of Bremen (unpublished).
+          Click the figure for data-access information.
+        </figcaption>
+      </figure>
+
       <h3>Carbonates and Silicates</h3>
     
       <p>
@@ -351,7 +406,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="data-access">
       <h2>Data Availability</h2>
 
       <div class="data-notice">
