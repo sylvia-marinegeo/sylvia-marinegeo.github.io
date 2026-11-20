@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An investigation of hydrographic anomalies and a satellite-tracked anticyclone encountered by Argo float 1900857.">
+
+  <title>From Anomaly to Anticyclone | Marine Geoscience</title>
+
+  <style>
+    :root {
+      --navy: #102b3f;
+      --navy-light: #173b50;
+      --teal: #55c6bd;
+      --background: #f5f8fa;
+      --text: #263746;
+      --muted: #617381;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--navy);
+      padding: 24px 8%;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      color: white;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: #dce8ee;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: var(--teal); }
+
+    .hero {
+      background: linear-gradient(135deg, #102b3f, #20566a);
+      color: white;
+      padding: 90px 8% 100px;
+    }
+
+    .hero-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.2;
+      margin: 18px 0 24px;
+      max-width: 850px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      color: #d1e1e9;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 75px 8%;
+    }
+
+    section { margin-bottom: 85px; }
+
+    h2 {
+      color: var(--navy);
+      font-size: 29px;
+      margin-bottom: 22px;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-top: 35px;
+    }
+
+    p { margin-bottom: 20px; }
+
+    .section-number {
+      color: #168b88;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .summary {
+      background: white;
+      padding: 32px;
+      border: 1px solid #e2eaf0;
+      border-radius: 10px;
+    }
+
+    .figure-placeholder {
+      background: #e8eff3;
+      border: 1px dashed #aebfc9;
+      border-radius: 8px;
+      padding: 65px 25px;
+      text-align: center;
+      color: var(--muted);
+      margin: 35px 0 12px;
+    }
+
+    .figure-caption {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .page-navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid #dce5eb;
+      padding-top: 30px;
+    }
+
+    .page-navigation a {
+      color: #087f83;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .page-navigation a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #c9d8df;
+      padding: 35px 8%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .hero { padding: 65px 8%; }
+      .summary { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a class="logo" href="/">MARINE GEOSCIENCE</a>
+      <div>
+        <a href="/">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#discovery">Discovery</a>
+        <a href="#results">Results</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Argo Float 1900857 · Part I</div>
+
+      <h1>From Anomaly to Anticyclone</h1>
+
+      <p>
+        How an unexpected hydrographic observation led to the
+        identification of a prolonged encounter between an Argo
+        profiling float and a satellite-tracked anticyclone in
+        the Agulhas retroflection region.
+      </p>
+    </div>
+  </div>
+
+  <main>
+
+    <section id="overview">
+      <div class="section-number">01 / Research Overview</div>
+      <h2>An Investigation That Began with an Anomaly</h2>
+
+      <p>
+        This investigation began as an exploratory analysis of
+        temperature, salinity, and water-mass properties measured
+        by Argo float 1900857.
+      </p>
+
+      <p>
+        During examination of the float's vertical profiles,
+        an unusually warm and saline observation in May 2009
+        raised questions about the influence of mesoscale
+        ocean circulation on the local hydrographic structure.
+      </p>
+
+      <p>
+        Further examination of the float record revealed a
+        second, more persistent period of anomalous conditions
+        during late 2009. Satellite altimetry and an eddy-tracking
+        atlas were subsequently used to investigate whether
+        these observations were associated with anticyclonic
+        circulation.
+      </p>
+
+      <div class="summary">
+        <strong>Research question</strong>
+        <p>
+          Can hydrographic anomalies observed by an Argo float
+          be linked to identifiable mesoscale anticyclones
+          using satellite altimetry and eddy-tracking data?
+        </p>
+      </div>
+    </section>
+
+    <section id="discovery">
+      <div class="section-number">02 / Initial Discovery</div>
+      <h2>The May 2009 Hydrographic Anomaly</h2>
+
+      <p>
+        On May 13, 2009, cycle 44 recorded substantially warmer
+        and more saline water at intermediate depths than
+        neighboring profiles.
+      </p>
+
+      <p>
+        The anomaly coincided with a pronounced downward
+        displacement of density surfaces. Its characteristics
+        motivated an investigation of nearby mesoscale
+        circulation using satellite sea-level observations.
+      </p>
+
+      <div class="figure-placeholder">
+        Figure 1 — Temperature, salinity, and density profiles
+        for cycles 43, 44, and 45
+      </div>
+
+      <p class="figure-caption">
+        Planned figure: comparison of the anomalous profile
+        with its immediate temporal neighbors.
+      </p>
+
+      <h3>From Hydrography to Satellite Observations</h3>
+
+      <p>
+        Satellite observations showed positive sea-level
+        anomalies near the float's position. An anticyclonic
+        eddy was identified in the surrounding region, although
+        the available spatial evidence did not establish that
+        cycle 44 was located inside its effective boundary.
+      </p>
+
+      <p>
+        The initial finding therefore suggested a possible
+        association with mesoscale anticyclonic circulation,
+        rather than confirming a direct eddy encounter.
+      </p>
+    </section>
+
+    <section id="results">
+      <div class="section-number">03 / Continued Investigation</div>
+      <h2>A Persistent Anticyclone Encounter</h2>
+
+      <p>
+        Examination of the longer Argo record revealed
+        sustained warm, saline intermediate-depth conditions
+        during October 2009–January 2010.
+      </p>
+
+      <p>
+        The investigation was extended using satellite
+        sea-level anomaly fields and the AVISO META4.0
+        mesoscale eddy atlas.
+      </p>
+
+      <p>
+        This analysis identified a tracked anticyclone
+        associated with META4.0 track 477593, segment 10.
+        Comparison of daily eddy positions and effective
+        contours with the float's profiling locations
+        provided evidence of a prolonged spatial encounter.
+      </p>
+
+      <div class="figure-placeholder">
+        Figure 2 — Satellite sea-level anomaly and
+        anticyclone effective contour, November 19, 2009
+      </div>
+
+      <p class="figure-caption">
+        Planned figure: satellite-derived anticyclone
+        boundary and Argo float position during cycle 63.
+      </p>
+
+      <h3>Quantifying the Encounter</h3>
+
+      <p>
+        Of 14 Argo profiles examined between September 10,
+        2009, and January 18, 2010, 13 were located inside
+        the anticyclone's satellite-derived effective contour.
+      </p>
+
+      <p>
+        Eleven consecutive profiling positions, spanning
+        100 days from October 10, 2009, through January 18,
+        2010, fell inside the effective contour.
+      </p>
+
+      <p>
+        The closest observed approach to the eddy center
+        occurred on December 19, 2009, when the float
+        surfaced approximately 4.4 km from the
+        satellite-derived center.
+      </p>
+
+      <div class="figure-placeholder">
+        Figure 3 — Float and anticyclone trajectories,
+        September 2009–January 2010
+      </div>
+
+      <p class="figure-caption">
+        Planned figure: spatial evolution of the float
+        and the tracked anticyclone.
+      </p>
+
+      <h3>Interpretation and Limitations</h3>
+
+      <p>
+        The repeated spatial overlap supports a prolonged
+        association between the float and the tracked
+        anticyclone. However, satellite-derived effective
+        contours describe surface circulation features.
+        Geographic overlap alone does not establish
+        dynamical trapping at the float's parking depth.
+      </p>
+
+      <p>
+        The resulting evidence provides a basis for a
+        more detailed investigation of subsurface
+        hydrographic evolution during the encounter.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-number">04 / Next Investigation</div>
+      <h2>Inside the Anticyclone</h2>
+
+      <p>
+        The next stage examines how temperature, salinity,
+        density structure, and water-mass properties evolved
+        while the float was associated with the anticyclone.
+      </p>
+
+      <div class="page-navigation">
+        <a href="/">← Back to Research Portfolio</a>
+        <a href="hydrography.html">
+          Part II: Hydrographic Evolution →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Marine Geoscience Research Portfolio ·
+      <a href="https://github.com/sylvia-marinegeo">
+        GitHub
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
