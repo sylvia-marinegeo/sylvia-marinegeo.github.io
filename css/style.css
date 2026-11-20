@@ -68,6 +68,13 @@ nav a:hover{
     margin:auto
 }
 
+.project-author {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
 .eyebrow{
     color:var(--teal-bright);
     text-transform:uppercase;
