@@ -189,58 +189,82 @@
         Stage 01 · The Initial Observation
       </div>
 
-      <h2>An Unexpected Hydrographic Profile</h2>
+
+      <h3>From Exploration to Anomaly Detection</h3>
 
       <p>
-        My initial analysis focused on the vertical distributions
-        of temperature, salinity, and potential density recorded
-        by Argo float 1900857.
+        The investigation began with an examination of the intermediate-depth
+        salinity minimum recorded by Argo float 1900857 between 2008 and 2013.
+        I plotted the pressure at which the minimum salinity occurred in each
+        profile to examine how its vertical position changed along the float's
+        trajectory.
       </p>
 
       <p>
-        One profile stood out. On May 13, 2009, cycle 44 recorded
-        substantially warmer and more saline water at intermediate
-        depths than the profiles collected immediately before
-        and after it.
+        The resulting time series revealed substantial variability, with the
+        salinity minimum occurring at markedly different pressures across
+        successive observations. This raised a question: which profiles
+        exhibited the largest changes?
+      </p>
+
+      <figure class="research-figure">
+        <img
+          src="images/argo_salinity_minimum_timeseries.png"
+          alt="Time series showing the pressure and salinity of the intermediate-depth salinity minimum recorded by Argo float 1900857."
+          loading="lazy"
+        >
+        <figcaption>
+          <strong>Figure 1.</strong>
+          Vertical position of the intermediate-depth salinity minimum
+          between 2008 and 2013. Marker color represents the minimum
+          practical salinity measured in each profile.
+        </figcaption>
+      </figure>
+
+      <h3>Identifying the Largest Changes</h3>
+
+      <p>
+        To identify unusual observations systematically, I calculated the
+        difference in salinity-minimum pressure between successive profiles
+        and ranked the results by absolute magnitude.
       </p>
 
       <p>
-        At approximately 500 dbar, Conservative Temperature
-        reached 13.41°C, compared with approximately 6–7°C
-        in the neighboring profiles.
+        Cycle 44, recorded on 13 May 2009, exhibited the largest change
+        in the dataset: the salinity minimum occurred at 1,138 dbar,
+        approximately 500 dbar deeper than in the preceding profile.
+        Just ten days later, cycle 45 recorded a 400 dbar decrease.
       </p>
 
-      <div class="evidence-card">
+      <figure class="research-figure">
+        <img
+          src="images/argo_salinity_pressure_changes.png"
+          alt="Absolute pressure changes in the salinity minimum between successive Argo profiles, highlighting cycles 44 and 45."
+          loading="lazy"
+        >
+        <figcaption>
+          <strong>Figure 2.</strong>
+          Absolute changes in salinity-minimum pressure between successive
+          profiles. Cycle 44 exhibited the largest change (+500 dbar),
+          followed by a substantial reversal in cycle 45 (-400 dbar).
+        </figcaption>
+      </figure>
 
-        <div class="evidence-label">
-          Observation · 500 dbar
-        </div>
+      <p>
+        These results identified cycle 44 as a candidate for further
+        investigation. Although a large change in salinity-minimum pressure
+        does not establish its physical cause, it provides an objective
+        basis for selecting an unusual observation.
+      </p>
 
-        <div class="evidence-grid">
+      <h3>Examining the Hydrographic Structure</h3>
 
-          <div>
-            <strong>13.41°C</strong>
-            <span>Conservative Temperature</span>
-          </div>
-
-          <div>
-            <strong>35.45 g/kg</strong>
-            <span>Absolute Salinity</span>
-          </div>
-
-          <div>
-            <strong>26.52 kg/m³</strong>
-            <span>Potential density anomaly (σ₀)</span>
-          </div>
-
-        </div>
-
-        <p class="note">
-          Measurements from cycle 44, May 13, 2009.
-          Values are reported at approximately 500 dbar.
-        </p>
-
-      </div>
+      <p>
+        I next compared the temperature, salinity, and potential-density
+        profiles from cycles 43, 44, and 45. This comparison revealed that
+        cycle 44 differed substantially from its neighboring profiles,
+        particularly at intermediate depths.
+      </p>
 
       <figure class="research-figure">
 
@@ -253,6 +277,7 @@
         >
 
         <figcaption>
+          <strong>Figure 3.</strong>
           Comparison of Conservative Temperature, Absolute
           Salinity, and potential density anomaly for Argo
           float 1900857, cycles 43–45. The anomalous
