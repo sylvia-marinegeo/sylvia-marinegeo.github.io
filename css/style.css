@@ -801,3 +801,78 @@ select{padding:10px 15px;
     grid-template-columns: 1fr;
   }
 }
+
+/* Collapsible research data tables */
+
+.data-table-container {
+  margin: 1.75rem 0;
+}
+
+.data-details {
+  border: 1px solid #d8e0e5;
+  border-radius: 6px;
+  background: #fafbfc;
+  overflow: hidden;
+}
+
+.data-details summary {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #29465b;
+}
+
+.data-details summary:hover {
+  background: #f0f4f6;
+}
+
+.data-details[open] summary {
+  border-bottom: 1px solid #d8e0e5;
+}
+
+.table-description,
+.table-note {
+  margin: 1rem 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #657580;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  padding: 0 1.25rem;
+}
+
+.research-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.research-table th,
+.research-table td {
+  padding: 0.7rem 0.85rem;
+  text-align: right;
+  border-bottom: 1px solid #e4e9ed;
+}
+
+.research-table th:first-child,
+.research-table td:first-child {
+  text-align: left;
+}
+
+.research-table th {
+  font-weight: 600;
+  color: #29465b;
+}
+
+.research-table .highlight-row {
+  background: #edf3f7;
+  font-weight: 600;
+}
+
+.research-table tbody tr:last-child td {
+  border-bottom: none;
+}

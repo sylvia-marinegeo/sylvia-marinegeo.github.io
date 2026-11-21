@@ -61,54 +61,50 @@
       <h2>It Began with an Unexpected Observation</h2>
 
       <p>
-        While examining temperature, salinity, and density profiles
-        from Argo float 1900857, I encountered a profile that differed
-        substantially from those recorded immediately before and
-        after it.
+        What started as an exercise in learning 
+        <a href="https://argopy.readthedocs.io/en/latest/"
+          target="_blank" rel="noopener noreferrer"><em>argopy</em></a>,
+        a Python library for accessing Argo float data, quickly became 
+        something more interesting. To familiarize myself with its features, 
+        I selected Argo float 1900857, one of the examples provided in the 
+        documentation. Armed with concepts I'd learned in oceanography class 
+        just a week earlier, I began plotting temperature, salinity, and 
+        density profiles.
+
       </p>
 
       <p>
-        On May 13, 2009, the float measured unusually warm and saline
-        water at intermediate depths. At approximately 500 dbar,
-        Conservative Temperature was more than 6°C higher than in
-        neighboring profiles.
+        One profile immediately stood out.
+      </p>
+
+      <p>
+        On May 13, 2009, the float recorded unusually warm, saline water 
+        at intermediate depths. At approximately 500 dbar, the temperature 
+        was more than 6°C higher than in the profiles recorded immediately 
+        before and after it.
       </p>
 
       <p class="investigation-question">
-        Was this a measurement error, a change in water mass,
-        or evidence of a larger oceanographic feature?
+        Was this a measurement error? A different water mass? Or evidence of 
+        something larger?
       </p>
 
       <p>
-        To investigate, I examined the quality of the measurements,
-        compared vertical density structures, and turned to
-        satellite observations of sea-surface height.
+        Curious, I began investigating. I checked the data quality, examined 
+        the density structure, and searched satellite observations for clues. 
+        The evidence pointed toward a possible mesoscale eddy, but I couldn't 
+        confirm that the float had actually encountered one.
       </p>
 
       <p>
-        The initial satellite evidence suggested a possible
-        connection to mesoscale circulation, but did not establish
-        that the float was inside an eddy.
+        Rather than stop there, I expanded my analysis to the float's complete 
+        record. That's when I discovered a second anomaly later in 2009, which 
+        persisted across multiple profiles.
       </p>
 
       <p>
-        Further examination of the float's trajectory revealed
-        a second, more persistent hydrographic anomaly later in
-        2009. This led to a systematic comparison with
-        satellite-tracked anticyclones in the Agulhas region.
-      </p>
-
-      <p>
-        By combining independent datasets and quantitative spatial
-        analysis, I identified a tracked anticyclone whose effective
-        boundary repeatedly encompassed the float's observed
-        positions.
-      </p>
-
-      <p>
-        The following sections document how that conclusion was
-        reached, including the analyses that supported it and the
-        uncertainties that remain.
+        What started as a programming exercise had become an investigation into 
+        the ocean's mesoscale circulation.
       </p>
 
     </section>
@@ -118,12 +114,6 @@
       <div class="section-label">Research Process</div>
 
       <h2>Following the Evidence</h2>
-
-      <p>
-        The investigation developed through seven stages,
-        moving from an unexpected measurement to an independently
-        supported association with a tracked anticyclone.
-      </p>
 
       <div class="investigation-timeline">
 
@@ -177,7 +167,7 @@
 
         <a href="#stage-07" class="timeline-step">
           <span class="timeline-number">07</span>
-          <span class="timeline-title">Validation</span>
+          <span class="timeline-title">The Final Test</span>
           <span class="timeline-description">
             Quantifying the spatial association
           </span>
@@ -190,25 +180,29 @@
     <section id="stage-01" class="investigation-stage">
 
       <div class="section-label">
-        Stage 01 · The Initial Observation
+        Stage 01 · An unexpected hydrographic profile
       </div>
 
 
-      <h3>From Exploration to Anomaly Detection</h3>
+      <h2>From Exploration to Anomaly Detection</h2>
 
       <p>
-        The investigation began with an examination of the intermediate-depth
-        salinity minimum recorded by Argo float 1900857 between 2008 and 2013.
-        I plotted the pressure at which the minimum salinity occurred in each
-        profile to examine how its vertical position changed along the float's
-        trajectory.
+        The Argo dataset was manageable enough that I could start experimenting
+        right away, applying concepts I'd learned in oceanography class just a 
+        week earlier.
       </p>
 
       <p>
-        The resulting time series revealed substantial variability, with the
-        salinity minimum occurring at markedly different pressures across
-        successive observations. This raised a question: which profiles
-        exhibited the largest changes?
+        I began by plotting temperature, salinity, and density profiles, then 
+        examined how the depth of the intermediate salinity minimum changed 
+        along Argo float 1900857's trajectory between 2008 and 2013.
+      </p>
+
+      <p>
+        The resulting time series showed considerable variability, but one 
+        observation stood out. Rather than rely on visual inspection alone, 
+        I decided to calculate the changes between successive profiles to see 
+        just how unusual it was.
       </p>
 
       <figure class="research-figure">
@@ -226,50 +220,42 @@
         </figcaption>
       </figure>
 
-      <h3>Identifying the Largest Changes</h3>
+      <h3>Investigating the Anomaly</h3>
 
       <p>
-        To identify unusual observations systematically, I calculated the
-        difference in salinity-minimum pressure between successive profiles
-        and ranked the results by absolute magnitude.
-      </p>
-
-      <p>
-        Cycle 44, recorded on 13 May 2009, exhibited the largest change
-        in the dataset: the salinity minimum occurred at 1,138 dbar,
-        approximately 500 dbar deeper than in the preceding profile.
-        Just ten days later, cycle 45 recorded a 400 dbar decrease.
+        The results confirmed what had caught my attention. On 13 May 2009, 
+        cycle 44 recorded the largest change in the dataset. The salinity 
+        minimum had shifted to 1,138 dbar, approximately 500 dbar deeper 
+        than in the preceding profile. Just ten days later, it returned 
+        upward by roughly 400 dbar.
       </p>
 
       <figure class="research-figure">
         <img
-          src="images/argo_salinity_pressure_changes.png"
-          alt="Absolute pressure changes in the salinity minimum between 
-          successive Argo profiles, highlighting cycles 44 and 45."
-          loading="lazy"
+        src="images/argo_salinity_pressure_changes.png"
+        alt="Absolute pressure changes in the salinity minimum between 
+        successive Argo profiles, highlighting cycles 44 and 45."
+        loading="lazy"
         >
         <figcaption>
           <strong>Figure 2.</strong>
-          Absolute changes in salinity-minimum pressure between successive
-          profiles. Cycle 44 exhibited the largest change (+500 dbar),
-          followed by a substantial reversal in cycle 45 (-400 dbar).
+          Changes in salinity-minimum pressure between successive profiles, 
+          highlighting the 500 dbar increase in cycle 44 and the subsequent 
+          400 dbar decrease in cycle 45.
         </figcaption>
       </figure>
-
+      
       <p>
-        These results identified cycle 44 as a candidate for further
-        investigation. Although a large change in salinity-minimum pressure
-        does not establish its physical cause, it provides an objective
-        basis for selecting an unusual observation.
+        Such a dramatic change over a relatively short period was intriguing. 
+        But the position of the salinity minimum alone couldn't tell me what 
+        was happening. I needed to look at the water column more closely.
       </p>
 
-      <h3>Examining the Hydrographic Structure</h3>
-
       <p>
-        I next compared the temperature, salinity, and potential-density
-        profiles from cycles 43, 44, and 45. This comparison revealed that
-        cycle 44 differed substantially from its neighboring profiles,
-        particularly at intermediate depths.
+        I compared the temperature, salinity, and potential-density profiles 
+        from cycles 43, 44, and 45. The differences were striking. At intermediate 
+        depths, cycle 44 contained much warmer and saltier water than either 
+        neighboring profile, accompanied by substantially lower potential density.
       </p>
 
       <figure class="research-figure">
@@ -284,30 +270,23 @@
 
         <figcaption>
           <strong>Figure 3.</strong>
-          Comparison of Conservative Temperature, Absolute
-          Salinity, and potential density anomaly for Argo
-          float 1900857, cycles 43–45. The anomalous
-          intermediate-depth structure of cycle 44 is
-          compared with neighboring profiles.
+          Comparison of Conservative Temperature, Absolute Salinity, and 
+          potential density anomaly for cycles 43–45.
         </figcaption>
 
       </figure>
 
-      <h3>Why Was This Unusual?</h3>
-
       <p>
-        The anomaly was not limited to temperature.
-        Cycle 44 also exhibited elevated salinity and
-        reduced potential density at comparable pressures,
-        indicating a substantial difference in hydrographic
+        What initially appeared to be an unusual shift in the salinity minimum 
+        was part of a much broader change in the water column's hydrographic 
         structure.
       </p>
 
       <p>
-        However, an unusual profile does not necessarily
-        indicate an oceanographic event. Before interpreting
-        the measurements, I needed to establish whether
-        the observations were reliable.
+        I began to wonder whether the float had encountered a different water 
+        mass or perhaps a larger oceanographic feature. But there was another 
+        possibility I needed to consider before pursuing either explanation: 
+        the measurements themselves might be wrong.
       </p>
 
       <p class="stage-transition">
@@ -328,33 +307,16 @@
       <h2>Could the Measurements Be Wrong?</h2>
 
       <p>
-        Before interpreting the anomalous profile as evidence of
-        an oceanographic feature, I needed to determine whether
-        the measurements were reliable.
+        Before looking for an oceanographic explanation, I needed to rule 
+        out a more mundane possibility: faulty measurements. An instrument 
+        malfunction or processing error could produce an unusual profile, 
+        so I started by checking the Argo quality-control flags.
       </p>
 
       <p>
-        An unusual temperature or salinity measurement could
-        result from an instrument problem, data-processing error,
-        or an isolated measurement artifact.
-        I therefore examined the Argo quality-control flags
-        and compared the vertical structure of cycle 44 with
-        its neighboring profiles.
-      </p>
-
-      <h3>Checking the Argo Quality Flags</h3>
-
-      <p>
-        The quality-control assessment indicated that the
-        temperature, salinity, and pressure observations
-        examined for cycle 44 were assigned Argo QC flag 1,
-        indicating good data.
-      </p>
-
-      <p>
-        This did not independently establish the physical
-        explanation for the anomaly, but it provided no
-        immediate quality-control reason to reject the profile.
+        All 110 pressure-level observations examined in cycle 44 had QC flag 
+        1, indicating good-quality data across the measured pressure range of 
+        16–2005 dbar.
       </p>
 
       <div class="evidence-card">
@@ -384,25 +346,31 @@
 
       </div>
 
+      <p>
+        The quality-control results were reassuring, but I wanted to know 
+        whether the anomaly extended through the water column or was confined 
+        to a few measurements.
+      </p>
+
       <h3>Examining the Vertical Structure</h3>
 
       <p>
-        The anomaly extended through a substantial portion
-        of the water column rather than appearing as a
-        single isolated measurement.
+        I compared the position of the same potential-density surface, or 
+        isopycnal, across cycles 43, 44, and 45. If the unusual temperature 
+        and salinity measurements reflected a broader change in the water 
+        column, I expected to see a corresponding difference in its density 
+        structure.
       </p>
 
       <p>
-        To investigate the density structure, I compared
-        the pressure of the same potential density surface
-        across cycles 43, 44, and 45.
+        And there was one.
       </p>
 
       <p>
-        The potential density anomaly surface
-        σ₀ = 27.0 kg/m³ occurred at approximately
-        879 dbar in cycle 44, around 406 dbar deeper
-        than its average position in the neighboring profiles.
+        In cycle 44, the σ₀ = 27.0 kg/m³ isopycnal occurred at approximately 
+        879 dbar, about 406 dbar deeper than its average position in the 
+        neighboring profiles. This was a substantial displacement, suggesting 
+        that the anomaly involved more than a handful of unusual measurements.
       </p>
 
       <figure class="research-figure">
@@ -417,30 +385,24 @@
         >
 
         <figcaption>
-          The σ₀ = 27.0 kg/m³ isopycnal occurred approximately 
-          406 dbar deeper in cycle 44 than the mean position 
-          in the neighboring profiles. This substantial 
-          difference indicates an unusual vertical density 
-          structure, consistent with a possible mesoscale 
-          oceanographic feature.
+          <strong>Figure 4.</strong>
+          The σ₀ = 27.0 kg/m³ isopycnal was approximately 406 dbar deeper in 
+          cycle 44 than the neighboring-profile mean, revealing a pronounced 
+          difference in vertical density structure.
         </figcaption>
 
       </figure>
 
-      <h3>What Did This Establish?</h3>
-
       <p>
-        The quality-control results and coherent vertical
-        structure supported treating cycle 44 as a plausible
-        oceanographic observation rather than dismissing
-        it as an isolated measurement artifact.
+        The combination of good quality-control flags and a coherent density 
+        anomaly gave me reason to treat cycle 44 as a plausible oceanographic 
+        observation. It wasn't proof that every measurement was correct, but 
+        there was no obvious reason to dismiss the profile as an artifact.
       </p>
 
       <p>
-        However, quality-control flags cannot rule out every
-        possible measurement problem, and the density
-        displacement alone could not identify the process
-        responsible.
+        That left the more interesting question: what physical process could 
+        produce such an unusual structure?
       </p>
 
       <p class="stage-transition">
@@ -454,10 +416,12 @@
 
     <section id="stage-03" class="investigation-stage">
 
-      <div class="stage-heading">
-        <span class="stage-number">03</span>
-        <h2>Searching for a Physical Explanation</h2>
+      <div class="section-label">
+        Stage 03 · Investigation Density Structure 
       </div>
+
+      <h2>Searching for a Physical Explanation</h2>
+
 
       <p>
         The measurements appeared credible, but their physical
@@ -529,151 +493,182 @@
 
     <section id="stage-04" class="investigation-stage">
 
-      <div class="stage-heading">
-        <span class="stage-number">04</span>
-        <h2>Searching for Satellite Evidence</h2>
+      <div class="section-label">
+        Stage 04 · Examining sea-level anomalies 
       </div>
 
+      <h2>Searching for Satellite Evidence</h2>
+
       <p>
-        The hydrographic structure observed in cycle 44 suggested
-        a possible anticyclonic eddy encounter. To investigate
-        this hypothesis, I examined satellite-derived sea-level
-        anomaly observations near the float's position on
-        13 May 2009.
+        The hydrographic structure observed in cycle 44 suggested a possible 
+        anticyclonic eddy encounter. To investigate this hypothesis, I 
+        examined satellite-derived sea-level anomaly observations near the 
+        float's position on 13 May 2009.
       </p>
 
-      <h3>Examining Sea-Level Anomalies</h3>
+      <h3>Looking for Clues from Space</h3>
 
       <p>
-        Satellite altimetry measures variations in sea-surface
-        height that can provide information about mesoscale
-        ocean circulation. In the Southern Hemisphere,
-        anticyclonic eddies are commonly associated with
-        positive sea-level anomalies.
+        The hydrographic profiles suggested that cycle 44 might have 
+        encountered an anticyclonic eddy. But could I find evidence of one 
+        near the float on 13 May 2009?
       </p>
 
       <p>
-        Satellite altimetry revealed that cycle 44 occurred within 
-        a region of elevated sea-surface height. The surrounding 
-        geostrophic velocity field suggested complex mesoscale 
-        circulation, but the spatial structure did not provide an 
-        unambiguous eddy boundary.
+        I turned to satellite altimetry, which measures variations in sea-surface 
+        height. In the Southern Hemisphere, anticyclonic eddies are often 
+        associated with elevated sea surfaces, making satellite observations 
+        a useful starting point.
+      </p>
+
+      <p>
+        I compared two satellite-derived products: sea-level anomaly (SLA), 
+        which measures deviations from the mean sea surface, and absolute 
+        dynamic topography (ADT), which incorporates the mean dynamic topography.
+      </p>
+
+      <p>
+        Both showed elevated sea-surface height near the float, although the 
+        surrounding patterns differed. The SLA map suggested a relatively 
+        localized feature, while the ADT field showed a broader region of 
+        elevated sea surface extending northeastward. There was clearly 
+        interesting circulation in the area, but identifying a distinct eddy 
+        was less straightforward.
       </p>
 
       <figure class="research-figure">
         <img
-          src="images/argo_may2009_satellite_altimetry.png"
-          alt="Satellite-derived sea-level anomaly and geostrophic 
-          current vectors in the Agulhas region on 13 May 2009, with 
-          Argo float cycle 44 marked by a yellow star."
+          src="images/argo_may2009_sla_adt.png"
+          alt="Side-by-side maps of sea-level anomaly and absolute
+              dynamic topography on 13 May 2009, with Argo
+              cycle 44 marked by a yellow star."
           loading="lazy"
         >
         <figcaption>
           <strong>Figure 5.</strong>
-          Satellite-derived sea-level anomaly and geostrophic
-          current vectors on 13 May 2009. The yellow star marks
-          the location of Argo float 1900857 during cycle 44.
-          The float was situated within a region of positive
-          sea-level anomaly, suggesting possible anticyclonic
-          mesoscale influence. However, the satellite field
-          alone does not establish that the float was enclosed
-          within a coherent eddy.
+          Satellite-derived sea-level anomaly and absolute
+          dynamic topography on 13 May 2009. Both fields show
+          elevated sea-surface height near the float, but
+          their different spatial patterns complicate the
+          identification of a distinct eddy.
         </figcaption>
       </figure>
 
 
-      <h3>Was the Float Inside an Eddy?</h3>
+      <h3>Following the Circulation Through Time</h3>
 
       <p>
-        I next compared the float's position with a nearby
-        anticyclonic eddy identified in a satellite-derived
-        eddy-tracking atlas.
+        A single satellite image offered only a snapshot of the circulation. 
+        I wanted to see how the surrounding features had evolved before the 
+        anomalous profile.
       </p>
 
       <p>
-        The candidate eddy's center was approximately 125 km
-        from the float, while its reported effective radius
-        was approximately 117 km. The float therefore lay
-        slightly beyond this radius.
+        Using satellite observations from April and May 2009, I created an 
+        animation of the changing sea-level anomaly field. The sequence 
+        revealed several evolving positive and negative anomalies, 
+        illustrating just how dynamic the region was.
+      </p>
+
+      <figure class="research-figure">
+        <video autoplay muted loop playsinline controls preload="metadata"
+              style="width: 100%; height: auto;">
+          <source src="images/argo_may2009_sla_animation.mp4" type="video/mp4">
+        </video>
+        
+        <figcaption>
+          <strong>Figure 6.</strong>
+          Evolution of satellite-derived sea-level anomalies during April–May 
+          2009. The yellow star marks the position of cycle 44 on 13 May, 
+          shown as a fixed geographic reference.
+        </figcaption>
+      </figure>
+
+      <h3>Testing the Eddy Boundary</h3>
+
+      <p>
+        To move beyond visual interpretation, I examined the AVISO Mesoscale 
+        Eddy Trajectory Atlas (META4.0), which identifies and tracks mesoscale 
+        eddies using satellite altimetry.
       </p>
 
       <p>
-        Although the observations suggested that the float
-        was near an anticyclonic feature, they did not
-        establish that it was inside the eddy's boundary.
-        The hydrographic anomaly could also have been
-        influenced by a nearby front, an eddy periphery,
-        or another mesoscale process.
+        The atlas identified a candidate anticyclone near the float on 13 May. 
+        Its center was approximately 125 km away, with a reported effective 
+        radius of about 117 km. Although the float was close to the feature, 
+        those measurements alone couldn't establish whether it was inside the eddy.
       </p>
 
+      <p>
+        The boundary map provided a clearer answer. The float's position fell 
+        outside the candidate anticyclone's satellite-derived effective contour.
+      </p>
 
-    <h3>Investigating the Density Structure</h3>
+      <p>
+        This was an important distinction. The hydrographic observations were 
+        consistent with an anticyclonic influence, and the satellite data 
+        showed a nearby eddy, but I couldn't confirm that the float had actually 
+        entered it.
+      </p>
 
-    <p>
-      To examine the anomaly more closely, I compared the vertical
-      positions of three potential-density surfaces in cycle 44
-      with their positions in the neighboring profiles.
-    </p>
+      <figure class="research-figure">
+        <img
+          src="images/argo_may2009_meta4_imagery.png"
+          alt="Map of satellite-derived anticyclonic eddy contours
+            on 13 May 2009, showing Argo cycle 44 outside
+            the boundary of a nearby candidate anticyclone."
+          loading="lazy"
+        >
+        <figcaption>
+          <strong>Figure 7.</strong>
+          Evolution of satellite-derived sea-level anomalies during April–May 
+          2009. The yellow star marks the position of cycle 44 on 13 May, 
+          shown as a fixed geographic reference.
+        </figcaption>
+      </figure>
 
-    <p>
-      All three isopycnals occurred at substantially greater
-      pressures in cycle 44, with differences of approximately
-      316–406 dbar relative to the neighboring-profile means.
-      The σ₀ = 27.0 kg/m³ surface reached approximately 879 dbar,
-      its greatest pressure in the entire float record.
-    </p>
+      <h3>Following the Candidate Anticyclone</h3>
 
-    <p>
-      These results strengthened the evidence for an unusual
-      vertical density structure, but they did not independently
-      establish the presence of an eddy.
-    </p>
+      <p>
+        I also investigated the satellite-derived eddy-tracking
+        records to determine whether the nearby anticyclone
+        could be traced through time.
+      </p>
 
-    <h3>Following the Candidate Anticyclone</h3>
+      <p>
+        The candidate feature was associated with a branching
+        tracking network extending back to January 2009.
+        This indicated that the satellite observations were
+        part of a more complex history of tracked mesoscale
+        features, rather than an isolated observation.
+      </p>
 
-    <p>
-      I also investigated the satellite-derived eddy-tracking
-      records to determine whether the nearby anticyclone
-      could be traced through time.
-    </p>
+      <p>
+        However, a branching tracking network does not
+        necessarily represent the uninterrupted lifetime
+        of one coherent eddy. Nor did the available spatial
+        evidence confirm that cycle 44 occurred within
+        the candidate anticyclone's boundary.
+      </p>
 
-    <p>
-      The candidate feature was associated with a branching
-      tracking network extending back to January 2009.
-      This indicated that the satellite observations were
-      part of a more complex history of tracked mesoscale
-      features, rather than an isolated observation.
-    </p>
+      <h3>An Unresolved Encounter</h3>
 
-    <p>
-      However, a branching tracking network does not
-      necessarily represent the uninterrupted lifetime
-      of one coherent eddy. Nor did the available spatial
-      evidence confirm that cycle 44 occurred within
-      the candidate anticyclone's boundary.
-    </p>
+      <p>
+        I also explored the eddy-tracking records to see whether the candidate 
+        feature could be followed through time. The records revealed a branching 
+        network of tracked features extending back to January 2009, but this did 
+        not establish the continuous history of a single coherent eddy.
+      </p>
 
-    <h3>Looking Beyond Cycle 44</h3>
+      <p>
+        Rather than force an explanation, I decided to broaden the investigation. 
+        Cycle 44 had the deepest σ₀ = 27.0 kg/m³ isopycnal in the float's entire 
+        record, but was it truly an isolated event?
+      </p>
 
-    <p>
-      Cycle 44 remained the most extreme individual
-      observation, but its physical explanation was
-      unresolved.
-    </p>
-
-    <p>
-      I therefore expanded the analysis to examine the
-      vertical position of the σ₀ = 27.0 kg/m³ isopycnal
-      throughout the float's record.
-    </p>
-
-    <p>
-      This revealed another unusual pattern: a prolonged
-      interval of depressed isopycnals during late 2009.
-      Unlike cycle 44, the anomaly persisted across
-      multiple successive profiles.
-    </p>
-
+      <p>
+        I returned to the full dataset to find out.
+      </p>
 
       <div class="stage-transition">
         <span>Next question</span>
@@ -686,27 +681,42 @@
 
     <section id="stage-05" class="investigation-stage">
 
-      <div class="stage-heading">
-        <span class="stage-number">05</span>
-        <h2>A Second Event</h2>
+      <div class="section-label">
+        Stage 05 · Discovering a persistent anomaly 
       </div>
 
-      <h3>Looking Beyond Cycle 44</h3>
+      <h2>Looking Beyond Cycle 44</h2>
 
       <p>
-        Although cycle 44 exhibited the deepest position of the
-        σ₀ = 27.0 kg/m³ isopycnal in the entire float record,
-        the physical explanation for this isolated anomaly
-        remained uncertain.
+        My investigation of cycle 44 had reached an impasse. The 
+        hydrographic measurements were convincing, and the satellite 
+        observations suggested that an anticyclonic eddy might have been 
+        involved. But the float's position outside the nearby eddy boundary 
+        meant I couldn't confidently connect the two.
       </p>
 
       <p>
-        To investigate whether similar conditions occurred
-        elsewhere, I examined the vertical position of this
-        isopycnal across the complete observational record.
-        A second pattern emerged between cycles 60 and 68:
-        a sustained interval of unusually deep isopycnals,
-        rather than a single extreme observation.
+        TI had been concentrating on a single profile because it was so 
+        unusual. What if I was overlooking something by focusing only on 
+        the most extreme observation?
+      </p>
+
+      <p>
+        I returned to the complete record of Argo float 1900857 and plotted 
+        the depth of the σ₀ = 27.0 kg/m³ isopycnal across all 192 cycles. 
+        Cycle 44 still stood out, reaching approximately 879 dbar, the 
+        deepest position recorded during the float's observations.
+      </p>
+
+      <p>
+        But something else caught my attention.
+      </p>
+
+      <p>
+        Later in 2009, between cycles 60 and 68, the isopycnal descended again. 
+        This time, instead of a single dramatic excursion followed by a rapid 
+        return to its previous position, the float recorded unusually deep 
+        isopycnals across a succession of profiles.
       </p>
 
       <figure class="research-figure">
@@ -718,7 +728,7 @@
           loading="lazy"
         >
         <figcaption>
-          <strong>Figure 6.</strong>
+          <strong>Figure 8.</strong>
           Pressure of the σ₀ = 27.0 kg/m³ isopycnal across
           the observational record of Argo float 1900857.
           Cycle 44 represents the deepest individual observation,
@@ -728,64 +738,121 @@
       </figure>
 
       <p>
-        The persistence of this second anomaly raised a new
-        question: did these profiles share the same warm,
-        saline, low-density characteristics observed during
-        cycle 44?
-      </p>
-
-
-      <h3>Comparing the Hydrographic Observations</h3>
-
-      <p>
-        The numerical results confirmed that the second anomaly
-        was not limited to a single observation. Of the ten
-        deepest positions of the σ₀ = 27.0 kg/m³ isopycnal
-        in the 192-cycle record, eight occurred between
-        cycles 60 and 68.
+        The pattern became even more striking when I examined the numbers. 
+        Of the ten deepest observations of this isopycnal in the entire record, 
+        eight occurred between cycles 60 and 68.
       </p>
 
       <p>
-        At approximately 500 dbar, these profiles also exhibited
-        elevated Conservative Temperature and Absolute Salinity,
-        accompanied by lower potential density, resembling
-        the hydrographic characteristics observed in cycle 44.
+        Cycle 44 might have been the most extreme individual event, but this 
+        second interval was harder to dismiss as an isolated encounter.
       </p>
 
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Cycle</th>
-            <th>CT (°C)</th>
-            <th>SA (g/kg)</th>
-            <th>σ₀ (kg/m³)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>43</td><td>6.298</td><td>34.553</td><td>27.034</td></tr>
-          <tr><td>44</td><td>13.414</td><td>35.445</td><td>26.524</td></tr>
-          <tr><td>45</td><td>6.666</td><td>34.579</td><td>27.006</td></tr>
-          <tr><td>60</td><td>11.132</td><td>35.138</td><td>26.732</td></tr>
-          <tr><td>62</td><td>10.963</td><td>35.104</td><td>26.735</td></tr>
-          <tr><td>64</td><td>11.462</td><td>35.208</td><td>26.724</td></tr>
-          <tr><td>66</td><td>11.077</td><td>35.133</td><td>26.737</td></tr>
-          <tr><td>68</td><td>11.615</td><td>35.092</td><td>26.606</td></tr>
-        </tbody>
-      </table>
-
       <p>
-        The similarity suggested that both events might
-        involve related physical processes, although the
-        observations did not establish that the same eddy
-        was responsible.
+        I wanted to know whether the resemblance extended beyond the displaced 
+        isopycnals. Were these later profiles also recording the unusually warm, 
+        saline water I had encountered in May?
       </p>
 
-      <h3>Examining the Float's Trajectory</h3>
+      <h3>A Familiar Hydrographic Signature</h3>
 
       <p>
-        I next examined the float's geographic positions
-        during cycles 55–73 to determine how its movement
-        changed before, during, and after the second anomaly.
+        To investigate, I compared Conservative Temperature, Absolute Salinity, 
+        and potential density at approximately 500 dbar, using the same properties 
+        that had first drawn my attention to cycle 44.
+      </p>
+
+      <p>
+        The results were remarkably similar.
+      </p>
+
+      <p>
+        During cycles 60–68, the float again encountered warmer, more saline 
+        water with lower potential density than the neighboring profiles 
+        around cycle 44. The changes were not quite as extreme as those 
+        recorded in May, but the combination of properties was familiar.
+      </p>
+
+      <p>
+        At approximately 500 dbar, Conservative Temperature during cycles 
+        60–68 ranged from 11.0 to 11.6°C, compared with 13.4°C during cycle 44. 
+        Absolute Salinity was also elevated, while potential density remained 
+        relatively low. The later profiles weren't quite as extreme as the May 
+        observation, but the combination of properties was familiar.
+      </p>
+
+      <div class="data-table-container">
+        <details class="data-details">
+          <summary>View hydrographic measurements at 500 dbar</summary>
+
+          <p class="table-description">
+            Comparison of Conservative Temperature (CT), Absolute Salinity (SA),
+            and potential density (σ₀) during the May 2009 anomaly and the
+            subsequent event between cycles 60 and 68.
+          </p>
+
+          <div class="table-scroll">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th scope="col">Cycle</th>
+                  <th scope="col">CT (°C)</th>
+                  <th scope="col">SA (g/kg)</th>
+                  <th scope="col">σ₀ (kg/m³)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>43</td><td>6.298</td><td>34.553</td><td>27.034</td></tr>
+                <tr class="highlight-row"><td>44</td><td>13.414</td><td>35.445</td><td>26.524</td></tr>
+                <tr><td>45</td><td>6.666</td><td>34.579</td><td>27.006</td></tr>
+                <tr><td>60</td><td>11.132</td><td>35.138</td><td>26.732</td></tr>
+                <tr><td>62</td><td>10.963</td><td>35.104</td><td>26.735</td></tr>
+                <tr><td>64</td><td>11.462</td><td>35.208</td><td>26.724</td></tr>
+                <tr><td>66</td><td>11.077</td><td>35.133</td><td>26.737</td></tr>
+                <tr><td>68</td><td>11.615</td><td>35.092</td><td>26.606</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="table-note">
+            Measurements are evaluated at approximately 500 dbar.
+            Cycle 44 represents the initial anomaly; cycles 60–68
+            represent the later interval of sustained isopycnal depression.
+          </p>
+        </details>
+      </div>
+
+      <p>
+        I now had two episodes in the same float record that shared an unusual 
+        combination of properties: depressed isopycnals, elevated temperature 
+        and salinity, and reduced potential density at intermediate depths.
+      </p>
+
+      <p>
+        That didn't mean the float had encountered the same eddy twice. In 
+        fact, there was no reason to assume it had. But the similarities 
+        suggested that related oceanographic processes might be responsible.
+      </p>
+
+      <p>
+        There was another difference that seemed important. The May anomaly 
+        appeared in one profile, whereas the later event extended across 
+        multiple observations. That gave me an opportunity I hadn't had before: 
+        I could examine how the float moved while these conditions persisted.
+      </p>
+
+      <h3>Following the Float</h3>
+
+      <p>
+        I mapped the float's trajectory between cycles 55 and 73, covering 
+        the period before, during, and after the second anomaly.
+      </p>
+
+      <p>
+        The positions associated with cycles 60–68 occupied a relatively 
+        restricted geographic region. Combined with the repeated hydrographic 
+        anomalies, this made me wonder whether the float was moving within, 
+        or repeatedly sampling, a coherent mesoscale feature.
       </p>
 
       <figure class="research-figure">
@@ -796,7 +863,7 @@
           loading="lazy"
         >
         <figcaption>
-          <strong>Figure 7.</strong>
+          <strong>Figure 9.</strong>
           Trajectory of Argo float 1900857 during cycles 55–73.
           Red markers identify cycles 60–68, when unusually
           deep isopycnals and warm, saline intermediate-depth
@@ -806,15 +873,27 @@
       </figure>
 
       <p>
-        The combination of persistent hydrographic anomalies
-        and the float's geographic behavior motivated a new
-        investigation using satellite altimetry.
+        The trajectory alone couldn't tell me whether an eddy was present. 
+        A float's path is influenced by the currents it encounters, and a 
+        cluster of positions doesn't necessarily indicate that it has become 
+        trapped in a rotating feature.
       </p>
 
       <p>
-        I selected 19 November 2009, corresponding to cycle 63,
-        to examine whether a mesoscale feature was present
-        near the float during the anomalous interval.
+        But unlike cycle 44, I now had a sequence of observations showing 
+        similar conditions over an extended period, together with the float's 
+        changing geographic position.
+      </p>
+
+      <p>
+        It was enough to justify another look from space.
+      </p>
+
+      <p>
+        I selected 19 November 2009, corresponding to cycle 63, and returned 
+        to the satellite altimetry records. This time, I wasn't looking for an 
+        explanation for a single unusual profile. I was looking for a feature 
+        that might account for an entire sequence of observations.
       </p>
 
       <div class="stage-transition">
@@ -829,25 +908,42 @@
 
     <section id="stage-06" class="investigation-stage">
 
-      <div class="stage-heading">
-        <span class="stage-number">06</span>
-        <h2>Eddy Tracking</h2>
+      <div class="section-label">
+        Stage 06 · Following an anticyclone 
       </div>
+      
+      <h2>Eddy Tracking</h2>
 
       <h3>Returning to Satellite Altimetry</h3>
 
       <p>
-        The persistent hydrographic anomaly observed during
-        cycles 60–68, together with the float's geographic
-        trajectory, suggested that mesoscale circulation
-        might be influencing the observations.
+        When I returned to the satellite altimetry data, I was cautiously 
+        optimistic. The second hydrographic anomaly had given me more to work 
+        with than cycle 44: multiple profiles showing unusually warm, 
+        saline water, persistently depressed isopycnals, and a float 
+        trajectory concentrated within a relatively small geographic area.
       </p>
 
       <p>
-        To investigate this possibility, I returned to
-        satellite altimetry, examining sea-level anomaly
-        observations for 19 November 2009, corresponding
-        to Argo cycle 63.
+        But I was reluctant to get ahead of myself. During my earlier 
+        investigation of cycle 44, the satellite observations had looked 
+        equally promising. I had found a nearby anticyclone, only to discover 
+        that the float's recorded position on 13 May 2009 fell just outside 
+        its effective contour.
+      </p>
+
+      <p>
+        I didn't want to mistake proximity for evidence of an encounter again.
+      </p>
+
+      <p>
+        This time, I examined the satellite-derived sea-level anomaly field for 
+        19 November 2009, corresponding to cycle 63.
+      </p>
+
+      <p>
+        And there it was: a prominent positive sea-level anomaly near the float's 
+        position, with a relatively coherent spatial structure.
       </p>
 
       <figure class="research-figure">
@@ -859,7 +955,7 @@
           loading="lazy"
         >
         <figcaption>
-          <strong>Figure 8.</strong>
+          <strong>Figure 10.</strong>
           Satellite-derived sea-level anomaly in the Agulhas
           region on 19 November 2009. The yellow star marks
           Argo cycle 63, located within a localized positive
@@ -870,35 +966,37 @@
       </figure>
 
       <p>
-        The satellite field revealed a prominent region
-        of positive sea-level anomaly near the float,
-        with a relatively coherent spatial structure.
-        Such features can be associated with warm-core
-        anticyclonic eddies, although sea-level anomaly
-        alone does not establish eddy identity or
-        demonstrate that a float is enclosed within one.
+        It was an encouraging first result. Positive sea-level anomalies 
+        are often associated with anticyclonic eddies, and the feature 
+        appeared in approximately the right place at the right time.
       </p>
 
       <p>
-        The next task was to determine whether this
-        feature appeared in an independently derived
-        mesoscale eddy-tracking dataset.
+        But I had seen something similar before. The next question was 
+        whether an independently identified anticyclone actually enclosed 
+        the float.
       </p>
 
-      <h3>Identifying a Tracked Anticyclone</h3>
+      <h3>Finding the Anticyclone</h3>
 
       <p>
-        To determine whether the positive sea-level anomaly
-        corresponded to an independently identified eddy,
-        I examined the AVISO Mesoscale Eddy Trajectory Atlas
-        (META4.0).
+        I returned to the AVISO Mesoscale Eddy Trajectory Atlas (META4.0), 
+        the same dataset I had used to investigate the May anomaly.
       </p>
 
       <p>
-        I searched for anticyclonic features near Argo cycle 63
-        on 19 November 2009 and identified a nearby eddy.
-        Its satellite-derived effective contour enclosed the
-        float's observed position.
+        I searched for anticyclonic eddies near the float's position on 19 
+        November and found a candidate associated with the positive sea-level 
+        anomaly. I then overlaid its satellite-derived effective contour onto 
+        the sea-level anomaly map.
+      </p>
+
+      <p>
+        This was the moment I had been hoping for.
+      </p>
+
+      <p>
+        <strong>The float was inside the contour.</strong>
       </p>
 
       <figure class="research-figure">
@@ -909,7 +1007,7 @@
           loading="lazy"
         >
         <figcaption>
-          <strong>Figure 9.</strong>
+          <strong>Figure 11.</strong>
           Satellite sea-level anomaly on 19 November 2009,
           overlaid with the META4.0 anticyclone's effective
           contour. The yellow star indicates Argo cycle 63,
@@ -918,34 +1016,58 @@
         </figcaption>
       </figure>
 
+      <p>
+        After the inconclusive investigation of cycle 44, seeing the float 
+        enclosed by an independently identified eddy boundary was particularly 
+        satisfying. For the first time in this investigation, the hydrographic 
+        anomaly, the positive sea-level anomaly, and the satellite-derived 
+        eddy identification all pointed toward the same explanation.
+      </p>
+
+      <p>
+        I was excited, but there was still an important distinction to make. 
+        The contour established that the float's observed surface position 
+        lay within the satellite-identified eddy boundary on that date. 
+        It didn't yet tell me whether the float had remained associated with 
+        the feature throughout the anomalous interval.
+      </p>
+
+      <p>
+        To investigate that, I needed to follow the eddy through time.
+      </p>
+
       <h3>Reconstructing the Eddy's History</h3>
 
       <p>
-        Having identified the candidate anticyclone,
-        I retrieved the surrounding atlas records belonging
-        to its tracking segment.
+        The candidate anticyclone was identified in META4.0 as track 477593, 
+        segment 10. I retrieved the corresponding tracking records and found 
+        144 daily observations extending from 1 September 2009 to 22 January 
+        2010.
       </p>
 
       <p>
-        The feature was identified as track 477593,
-        segment 10. Its record contained 144 daily
-        observations extending from 1 September 2009
-        to 22 January 2010.
+        This was another encouraging result. The feature I had identified in 
+        November was not simply an isolated detection on a single satellite 
+        map. It belonged to a tracked anticyclone whose recorded history 
+        extended across several months, encompassing the period of the float's 
+        second hydrographic anomaly.
       </p>
 
       <p>
-        This established that the November feature was
-        part of a tracked anticyclone observed over
-        several months, rather than an isolated
-        satellite detection.
+        I now had two independent records to compare: the float's observations 
+        and the satellite-derived positions of the anticyclone.
       </p>
 
-      <h3>Comparing Float and Eddy Trajectories</h3>
+      <p>
+        If the float had been sampling this eddy over an extended period, their 
+        geographic movements might reveal that association.
+      </p>
+
+      <h3>Comparing Their Paths</h3>
 
       <p>
-        I then compared the anticyclone's daily center
-        positions with the Argo float's trajectory
-        during the same period.
+        I plotted the anticyclone's daily center positions alongside the float's 
+        trajectory between September 2009 and January 2010.
       </p>
 
       <figure class="research-figure">
@@ -956,7 +1078,7 @@
           loading="lazy"
         >
         <figcaption>
-          <strong>Figure 10.</strong>
+          <strong>Figure 12.</strong>
           Geographic trajectories of Argo float 1900857
           and META4.0 anticyclone track 477593,
           segment 10, between September 2009 and
@@ -966,12 +1088,37 @@
       </figure>
 
       <p>
-        The trajectories showed that the float and
-        anticyclone occupied similar geographic positions
-        during much of the tracking period.
-        However, trajectory overlap alone could not
-        establish whether the float was enclosed
-        within the eddy.
+        The resulting map was encouraging. The float and anticyclone followed 
+        broadly similar geographic paths during much of the tracking period, 
+        suggesting that their association might extend beyond the single 
+        observation on 19 November.
+      </p>
+
+      <p>
+        By this point, several pieces of evidence had come together. The float 
+        had recorded a sustained hydrographic anomaly, satellite altimetry 
+        revealed a nearby positive sea-level feature, an independently tracked 
+        anticyclone enclosed the float on 19 November, and their trajectories 
+        appeared geographically related.
+      </p>
+
+      <p>
+        After the uncertainty surrounding cycle 44, it was satisfying to see 
+        these different observations begin to reinforce one another.
+      </p>
+
+      <p>
+        Still, I wanted to be careful about what the evidence actually 
+        demonstrated. Similar trajectories did not necessarily mean that the 
+        float had remained inside the eddy. Two objects can travel through the 
+        same region without one being enclosed by the other, and the eddy's 
+        irregular shape made simple comparisons of their positions insufficient.
+      </p>
+
+      <p>
+        This time, rather than stopping at a promising map, I wanted to test the 
+        relationship directly. I needed to compare each float position with the 
+        eddy's boundary on the corresponding date.
       </p>
 
       <div class="stage-transition">
@@ -985,33 +1132,31 @@
 
     <section id="stage-07" class="investigation-stage">
 
-      <div class="stage-heading">
-        <span class="stage-number">07</span>
-        <h2>Validation</h2>
+      <div class="section-label">
+        Stage 07 · Quantifying the spatial association
       </div>
 
-      <h3>Measuring Float–Eddy Proximity</h3>
+      <h2>Putting the Evidence to the Test</h2>
+
+      <h3>Was the Float Really Inside the Eddy?</h3>
 
       <p>
-        To quantify the relationship between the float
-        and the tracked anticyclone, I matched each
-        available Argo observation with the corresponding
-        daily eddy record.
+        To quantify the relationship between the float and the tracked 
+        anticyclone, I matched each available Argo observation with the 
+        corresponding daily eddy record.
       </p>
 
       <p>
-        I calculated the geographic distance between
-        the float and the eddy center, then normalized
-        this distance by the eddy's reported effective
-        radius.
+        The satellite observations were promising, but I wanted to know 
+        whether the float had remained associated with the anticyclone 
+        throughout the anomalous interval, rather than simply passing 
+        through it on 19 November 2009.
       </p>
 
       <p>
-        A normalized distance below 1 indicates that
-        the float was closer to the eddy center than
-        the reported effective radius. However, this
-        does not necessarily establish containment,
-        because real eddy contours are irregular.
+        I began by matching the float's observations with the corresponding 
+        daily eddy records and calculating the distance between their 
+        positions, normalized by the eddy's effective radius.
       </p>
 
       <figure class="research-figure">
@@ -1022,7 +1167,7 @@
           loading="lazy"
         >
         <figcaption>
-          <strong>Figure 11.</strong>
+          <strong>Figure 15.</strong>
           Distance between Argo float 1900857 and the
           center of META4.0 anticyclone track 477593,
           normalized by the reported effective radius.
@@ -1033,89 +1178,89 @@
         </figcaption>
       </figure>
 
-      <h3>Testing the Actual Eddy Contours</h3>
-
       <p>
-        To move beyond the circular-radius approximation,
-        I retrieved the satellite-derived effective
-        contours associated with the tracked anticyclone.
+        The results suggested a close association, but there was a problem 
+        with this approach. An eddy's effective radius describes a circle of 
+        equivalent area, while its actual boundary can be irregular. A float 
+        could therefore be within one effective radius of the center without 
+        being inside the eddy.
       </p>
 
       <p>
-        I then performed a geographic point-in-polygon
-        test for each matched float observation,
-        determining whether its position fell inside
-        the corresponding daily eddy contour.
+        To resolve this, I retrieved the satellite-derived effective contours 
+        and performed a point-in-polygon test for each matched observation.
       </p>
 
       <p>
-        Of the 14 examined float observations,
-        13 were located inside the effective contour.
-        Only cycle 58, observed on 30 September 2009,
-        fell outside.
+        <strong>Of the 14 float positions examined, 13 fell inside the 
+          anticyclone's effective contour.</strong>
       </p>
 
       <p>
-        Most notably, cycles 59–69 represented
-        11 consecutive observed positions inside
-        the tracked anticyclone, spanning approximately
-        100 days between 10 October 2009 and
-        18 January 2010.
-      </p>
-
-      <h3>What the Evidence Establishes</h3>
-
-      <p>
-        The combined evidence supports a sustained
-        association between Argo float 1900857 and
-        a satellite-tracked anticyclonic eddy during
-        late 2009.
+        The exception was cycle 58, recorded on 30 September 2009. 
+        Interestingly, its normalized distance was approximately 0.96, meaning 
+        the simpler radius-based calculation would have suggested containment. 
+        The actual contour revealed otherwise.
       </p>
 
       <p>
-        The hydrographic observations showed persistent
-        warm, saline, relatively low-density intermediate
-        waters and depressed isopycnals. Independent
-        satellite observations identified an anticyclone
-        whose effective contour enclosed the float
-        during most of the examined profiles.
+        More importantly, cycles 59–69 represented <strong>11 consecutive observed 
+        positions inside the tracked anticyclone</strong>, spanning approximately 
+        100 days between 10 October 2009 and 18 January 2010.
       </p>
 
       <p>
-        Nevertheless, the Argo observations were separated
-        by approximately ten days, and the satellite-derived
-        contours describe a surface mesoscale feature.
-        These results therefore do not establish continuous
-        subsurface trapping or demonstrate that every
-        intervening float position remained inside the eddy.
+        After the uncertainty surrounding cycle 44, this was the confirmation 
+        I had been hoping to find: not just a single observation near an eddy, 
+        but repeated geographic evidence supporting an extended association.
       </p>
 
-      <h3>Conclusion</h3>
+      <h3>What I Found</h3>
 
       <p>
-        The investigation began with a single extreme
-        hydrographic anomaly in May 2009. Although
-        satellite observations suggested a possible
-        anticyclonic influence, that encounter remained
-        unresolved.
+        The investigation had begun with an unusual salinity profile that I 
+        couldn't explain. My initial hypothesis that cycle 44 had encountered 
+        an anticyclonic eddy, remained unresolved. But looking beyond that 
+        single observation revealed a second event, one supported by several 
+        independent lines of evidence.
       </p>
 
       <p>
-        Extending the analysis to the full float record
-        revealed a second, persistent anomaly during
-        late 2009. Combining hydrographic observations,
-        satellite altimetry, mesoscale eddy tracking,
-        and geographic containment tests provided
-        substantially stronger evidence for an
-        anticyclonic eddy encounter.
+        The hydrographic measurements showed persistently warm, saline, 
+        relatively low-density intermediate waters and depressed isopycnals. 
+        Satellite altimetry identified a nearby anticyclone, and the geographic 
+        containment tests demonstrated that the float repeatedly occupied its 
+        effective contour.
       </p>
 
       <p>
-        This investigation illustrates how an unexpected
-        observation in autonomous oceanographic data
-        can lead to a testable physical interpretation
-        through the integration of independent datasets.
+        There were limits to what I could conclude. With approximately ten days 
+        between Argo profiles, I couldn't establish continuous containment, and 
+        satellite-derived surface boundaries alone couldn't demonstrate subsurface 
+        trapping. Nevertheless, the combined evidence strongly supported an 
+        extended association with the anticyclone.
       </p>
+
+      <p>
+        When I started exploring this dataset, I was simply applying concepts 
+        from my oceanography coursework to real observations. I hadn't expected 
+        to find myself investigating satellite altimetry, tracking mesoscale 
+        eddies, or testing geographic boundaries.
+      </p>
+
+      <p>
+        What I enjoyed most was discovering where an unexpected observation 
+        could lead, and learning that an inconclusive result didn't necessarily 
+        mean the investigation was over.
+      </p>
+
+      <p>
+        But identifying the anticyclone raised another question. I had established 
+        where the float was during the encounter, but what could its measurements 
+        tell me about the water masses and hydrographic structure within the eddy?
+      </p>
+
+      <p>That's where the next part of this investigation begins.</p>
 
     </section>
 
