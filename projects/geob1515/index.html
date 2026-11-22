@@ -12,429 +12,125 @@
 
 <body class="sediment-page">
 
-<header class="site-header">
-  <nav class="site-nav">
-    <a class="site-brand" href="../../index.html">
-      MARINE GEOSCIENCE
-    </a>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a class="site-brand" href="../../index.html">
+        MARINE GEOSCIENCE
+      </a>
 
-    <div class="nav-links">
-      <a href="../../index.html">Home</a>
-      <a href="../../index.html#projects">Projects</a>
-      <a href="https://github.com/sylvia-marinegeo"
-         target="_blank"
-         rel="noopener noreferrer">GitHub</a>
+      <div class="nav-links">
+        <a href="../../index.html">Home</a>
+        <a href="../../index.html#projects">Projects</a>
+        <a href="https://github.com/sylvia-marinegeo"
+          target="_blank"
+          rel="noopener noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Marine Sediment Research</div>
+      <h1>Carbonate Mineralogy of Equatorial Atlantic Sediments</h1>
+      <p>
+        An investigation of carbonate mineralogy in marine sediment core 
+        GeoB1515-1, integrating X-ray diffraction, scientific computing, 
+        and geospatial analysis to examine sediment composition and its 
+        potential paleoceanographic significance.
+      </p>
+      <p class="project-author">
+        Sylvia Hwang · B.Sc. Marine Geosciences · Universität Bremen
+      </p>
     </div>
-  </nav>
-</header>
-
-<div class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Marine Sediment Research</div>
-    <h1>Carbonate Mineralogy of Equatorial Atlantic Sediments</h1>
-    <p>
-      An investigation of carbonate mineralogy in marine sediment core 
-      GeoB1515-1, integrating X-ray diffraction, scientific computing, 
-      and geospatial analysis to examine sediment composition and its 
-      potential paleoceanographic significance.
-    </p>
-    <p class="project-author">
-      Sylvia Hwang · B.Sc. Marine Geosciences · Universität Bremen
-    </p>
-  </div>
-</div>
-
-<main>
-<section>
-  <h2>Project Overview</h2>
-  <p>
-    Marine sediment cores preserve records of changing oceanographic and 
-    sedimentary conditions. This project investigates carbonate mineral 
-    assemblages in sediment core GeoB1515-1 from the western equatorial 
-    Atlantic Ocean.
-  </p>
-  <p>
-    Quantitative X-ray diffraction (XRD) measurements are used to 
-    characterize variations in carbonate mineralogy throughout the 
-    sediment sequence. These observations will be examined alongside oxygen 
-    isotope stratigraphy and an age-depth model to evaluate their potential 
-    paleoceanographic significance.
-  </p>
-
-  <div class="metadata">
-    <div><strong>GeoB1515-1</strong><span>Core identifier</span></div>
-    <div><strong>6.58 m</strong><span>Recovered sediment</span></div>
-    <div><strong>3,129 m</strong><span>Water depth</span></div>
-    <div><strong>127</strong><span>XRD sample records</span></div>
-  </div>
-  
-  <div class="chart-card">
-    <h3>Study Area</h3>
-  
-    <img
-      src="images/geob1515_location.png"
-      alt="Bathymetric map of the western equatorial Atlantic showing the location of sediment core GeoB1515-1."
-      style="width:100%; height:auto; border-radius:6px;"
-    >
-  
-    <p class="note">
-      Geographic and bathymetric setting of sediment core
-      GeoB1515-1 in the western equatorial Atlantic.
-      Map prepared using QGIS.
-    </p>
   </div>
 
-</section>
+  <div id="project-nav-container"></div>
 
-<section>
-  <h2>Carbonate Stratigraphy</h2>
-  <p>
-    Selected XRD measurements illustrate how carbonate mineral
-    abundances vary with sediment depth.
-  </p>
-</section>
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        Marine sediment cores preserve records of changing oceanographic and 
+        sedimentary conditions. This project investigates carbonate mineral 
+        assemblages in sediment core GeoB1515-1 from the western equatorial 
+        Atlantic Ocean.
+      </p>
+      <p>
+        Quantitative X-ray diffraction (XRD) measurements are used to 
+        characterize variations in carbonate mineralogy throughout the 
+        sediment sequence. These observations will be examined alongside oxygen 
+        isotope stratigraphy and an age-depth model to evaluate their potential 
+        paleoceanographic significance.
+      </p>
 
+      <div class="metadata">
+        <div><strong>GeoB1515-1</strong><span>Core identifier</span></div>
+        <div><strong>6.58 m</strong><span>Recovered sediment</span></div>
+        <div><strong>3,129 m</strong><span>Water depth</span></div>
+        <div><strong>127</strong><span>XRD sample records</span></div>
+      </div>
+      
+      <div class="chart-card">
+        <h3>Study Area</h3>
+      
+        <img
+          src="images/geob1515_location.png"
+          alt="Bathymetric map of the western equatorial Atlantic showing the location of sediment core GeoB1515-1."
+          style="width:100%; height:auto; border-radius:6px;"
+        >
+      
+        <p class="note">
+          Geographic and bathymetric setting of sediment core
+          GeoB1515-1 in the western equatorial Atlantic.
+          Map prepared using QGIS.
+        </p>
+      </div>
 
-<section id="observations">
-  <h2>Key Mineralogical Observations</h2>
+    </section>
 
-  <p>
-    X-ray diffraction measurements reveal variations in carbonate
-    mineral assemblages throughout the GeoB1515-1 sediment sequence.
-    Three features are particularly notable.
-  </p>
-
-  <div class="observation-grid">
-
-    <div class="observation-card">
-      <div class="observation-number">01</div>
-      <h3>Near-Surface Aragonite Enrichment</h3>
+    <section id="research-objectives">
+      <h2>Research Objectives</h2>
 
       <p>
-        Aragonite is relatively abundant within the upper 25 cm of the 
-        sediment core, with substantially lower reported abundances below 
-        this interval.
+        This project examines the mineralogical and stratigraphic
+        characteristics of sediment core GeoB1515-1 to investigate
+        changes in sediment composition and their potential
+        paleoceanographic significance.
       </p>
 
-      <p class="note">
-        Potential significance: Variations in carbonate production, 
-        preservation, or dissolution.
-      </p>
-    </div>
+      <div class="methods">
 
-    <div class="observation-card">
-      <div class="observation-number">02</div>
-      <h3>Deeper Aragonite Occurrence</h3>
+        <h3>Carbonate Mineralogy</h3>
+        <p>
+          Characterize carbonate mineral assemblages using
+          quantitative X-ray diffraction and examine their
+          distribution throughout the sediment sequence.
+        </p>
 
-      <p>
-        A localized interval of elevated aragonite abundance occurs at 
-        approximately 418–428 cm.
-      </p>
+        <h3>Stratigraphic Context</h3>
+        <p>
+          Integrate published oxygen isotope measurements and
+          chronological constraints to investigate the temporal
+          context of sedimentary variations.
+        </p>
 
-      <p class="note">
-        Potential significance: Changes in carbonate preservation, sediment 
-        composition, or depositional conditions. Chronological interpretation 
-        remains under investigation.
-      </p>
-    </div>
+        <h3>Multiproxy Analysis</h3>
+        <p>
+          Explore relationships between mineralogical composition,
+          sediment properties, and other stratigraphic indicators
+          to evaluate possible depositional and paleoceanographic
+          processes.
+        </p>
 
-    <div class="observation-card">
-      <div class="observation-number">03</div>
-      <h3>Unusual Carbonate Phase at 203 cm</h3>
-
-      <p>
-        An anomalous abundance is reported in the combined siderite/magnesite category 
-        at 203 cm. This category is absent or nearly absent in most other samples.
-      </p>
-
-      <p class="note">
-        Further investigation: Examination of the original diffraction pattern is 
-        required to evaluate the mineral identification.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="bulk-composition">
-  <h2>Bulk Sediment Composition</h2>
-
-  <p>
-    The relative abundances of carbonate minerals and major
-    silicates vary throughout the sediment sequence.
-    Comparing these mineral groups provides an overview
-    of changes in bulk sediment composition.
-  </p>
-
-  <h3>Interpretation</h3>
-  
-  <p>
-    Carbonate and major silicate abundances exhibit a strong
-    negative correlation (r = −0.932) across the analyzed samples.
-    Carbonate-rich intervals generally correspond to lower
-    proportions of major silicate minerals.
-  </p>
-  
-  <p>
-    Because mineral abundances are expressed as percentages
-    of the same bulk sediment, this relationship is partly
-    influenced by the constant-sum constraint of
-    compositional data. The observed anticorrelation
-    should therefore not be interpreted as direct evidence
-    of opposing sediment fluxes.
-  </p>
-
-</section>
-
-<section>
-  <h2>Methods & Data Analysis</h2>
-
-  <div class="methods">
-    <h3>X-ray Diffraction</h3>
-    <p>
-      Quantitative XRD measurements are examined to characterize carbonate 
-      mineral assemblages, assess mineral distributions with depth, and 
-      identify anomalous mineral occurrences for further investigation.
-    </p>
-
-    <h3>Scientific Computing</h3>
-    <p>
-      Python and Jupyter notebooks support data cleaning, exploratory analysis, 
-      statistical comparisons, and visualization of mineralogical measurements.
-    </p>
-
-    <h3>Geospatial Context</h3>
-    <p>
-      QGIS is used to map the core location and examine its geographic and 
-      bathymetric setting within the western equatorial Atlantic.
-    </p>
-
-    <h3>Research Repository</h3>
-    <p>
-      Project documentation and analysis code are available in the public 
-      <a href="https://github.com/sylvia-marinegeo/sedimentcore"
-         target="_blank" rel="noopener noreferrer">GitHub</a>
-      repository. Unpublished quantitative XRD measurements are excluded.
-    </p>
-  </div>
-</section>
-  
-<section id="results">
-  <h2>Results and Interpretation</h2>
-
-  <p>
-    Quantitative X-ray diffraction results were examined to
-    investigate variations in carbonate mineral assemblages
-    throughout sediment core GeoB1515-1.
-  </p>
-
-  <h3>Carbonate Mineral Distribution</h3>
-
-  <p>
-    The analysis focuses on calcite, aragonite, and other
-    carbonate phases. Depth profiles are used to investigate
-    changes in mineral composition and identify intervals
-    for further examination.
-  </p>
-  
-  <figure class="result-figure">
-      <button
-        type="button"
-        class="figure-link"
-        onclick="openDataModal()"
-        aria-label="View XRD data access information"
-      >
-      <img
-        src="images/carbonate_depth_profile.png"
-        alt="Static depth profiles of carbonate minerals in sediment core GeoB1515-1"
-        loading="lazy"
-        oncontextmenu="return false;"
-        draggable="false"
-      >
-    </button>
-  
-    <figcaption>
-      Carbonate mineral distribution in sediment core GeoB1515-1.
-      Quantitative XRD data: Dr. Christoph Vogt,
-      University of Bremen (unpublished).
-      Click the figure for data-access information.
-    </figcaption>
-  </figure>
-
-  <h3>Carbonates and Silicates</h3>
-
-  <p>
-    Carbonate and silicate abundances are considered together
-    to investigate changes in bulk sediment composition.
-    Because mineral percentages represent parts of a
-    compositional dataset, their relationships must be
-    interpreted with consideration of the constant-sum
-    constraint.
-  </p>
-
-  <figure class="result-figure">
-    <button
-      type="button"
-      class="figure-link"
-      onclick="openDataModal()"
-      aria-label="View XRD data access information"
-    >
-      <img
-        src="images/carbonate_silicate_relationship.png"
-        alt="Scatter plot showing the negative relationship between carbonate and major silicate abundances."
-        loading="lazy"
-        oncontextmenu="return false;"
-        draggable="false"
-      >
-    </button>
-  
-    <figcaption>
-      Relationship between carbonate and major silicate
-      abundances in sediment core GeoB1515-1.
-      Quantitative XRD data: Dr. Christoph Vogt,
-      University of Bremen (unpublished).
-      Click the figure for data-access information.
-    </figcaption>
-  </figure>
-  
-  <p>
-    Carbonate and major silicate abundances exhibit a 
-    strong negative correlation (r=-0.932). However, 
-    because these mineral groups are expressed as percentages 
-    of the same bulk sediment, their anticorrelation is partly 
-    influenced by the constant-sum constraint. This relationship 
-    should not be interpreted as direct evidence of opposing 
-    sediment fluxes.
-  </p>
-  
-  <h3>Paleoceanographic Interpretation</h3>
-
-  <p>
-    Variations in carbonate mineralogy may reflect changes
-    in biological carbonate production, sediment supply,
-    carbonate preservation, or post-depositional processes.
-  </p>
-
-  <p>
-    Mineralogical observations will be evaluated alongside
-    sedimentological information and the developing
-    age-depth model before assigning specific
-    paleoceanographic interpretations.
-  </p>
-
-  <p class="citation">
-    Quantitative XRD data: Dr. Christoph Vogt,
-    University of Bremen. Unpublished dataset.
-    See Data Attribution below.
-  </p>
-</section>
-
-<section id="data-access">
-  <h2>Data Availability</h2>
-
-  <div class="data-notice">
-    <p>
-      The quantitative XRD dataset used in this project
-      is unpublished and is not available for public
-      download.
-    </p>
-
-    <p>
-      Please contact Dr. Christoph Vogt, 
-      Faculty of Geosciences (FB05), University of Bremen, 
-      for access to the full dataset.
-    </p>
-  </div>
-</section>
-
-<section>
-  <h2>Data Attribution</h2>
-
-  <p class="citation">
-    Vogt, Chr. (2026): QXRD data, full pattern
-    quantification of mineral assemblage data for Core
-    GeoB1515-4, unpublished data set by Dr. Christoph Vogt,
-    Geosciences University of Bremen. To be submitted to
-    Pangaea Data Publisher for Earth &amp; Environmental
-    Science, www.pangaea.de
-  </p>
-</section>
-
-<section id="references">
-  <h2>Data Sources & References</h2>
-
-  <div class="methods">
-
-    <h3>XRD Mineralogical Data</h3>
-    <p>
-      Quantitative X-ray diffraction measurements for sediment
-      core GeoB1515-1 were provided by Dr. Christoph Vogt,
-      University of Bremen. The dataset is currently unpublished
-      and is not available for public download.
-      See Data Availability and Data Attribution above.
-    </p>
-
-    <h3>Oxygen Isotope Data</h3>
-    <p>
-      Published stable isotope measurements for sediment core
-      GeoB1515-1 provide additional stratigraphic context
-      for the mineralogical investigation.
-    </p>
-    <p>
-      Rühlemann, C., Diekmann, B., Mulitza, S., &amp;
-      Frank, M. (1998).
-      Stable isotopes of sediment core GeoB1515-1.
-      PANGAEA.
-      <a href="https://doi.org/10.1594/PANGAEA.54617"
-         target="_blank" rel="noopener noreferrer">
-        https://doi.org/10.1594/PANGAEA.54617
-      </a>
-    </p>
-
-    <h3>Data Processing & Visualization</h3>
-    <p>
-      Python, pandas, and Matplotlib were used for
-      data processing, exploratory analysis, statistical
-      comparisons, and visualization of carbonate
-      mineral assemblages. Publicly displayed figures
-      are static representations of selected results.
-    </p>
-
-    <h3>Methodological References</h3>
-
-    <p>
-      Vogt, C., Lauterjung, J., &amp; Fischer, R. X. (2002).
-      Investigation of the clay fraction (&lt;2 μm)
-      of the Clay Minerals Society reference clays.
-      <em>Clays and Clay Minerals, 50</em>(3), 388–400.
-      <a href="https://doi.org/10.1346/000986002760833765"
-         target="_blank" rel="noopener noreferrer">
-        https://doi.org/10.1346/000986002760833765
-      </a>
-    </p>
-
-    <p>
-      Vogt, C. (2009).
-      Data report: semiquantitative determination of
-      detrital input to ACEX sites based on bulk sample
-      X-ray diffraction data.
-      <em>Proceedings of the Integrated Ocean Drilling
-      Program, 302.</em>
-      <a href="https://doi.org/10.2204/iodp.proc.302.203.2009"
-         target="_blank" rel="noopener noreferrer">
-        https://doi.org/10.2204/iodp.proc.302.203.2009
-      </a>
-    </p>
-
-  </div>
-</section>
+      </div>
+    </section>
 
   </main>
 
   <footer>
     <p>
       © 2026 Sylvia Hwang · Marine Geoscience Research Portfolio ·
-      <a href="https://github.com/sylvia-marinegeo">
+      <a href="https://github.com/sylvia-marinegeo/sedimentcore">
         GitHub
       </a>
     </p>

@@ -876,3 +876,58 @@ select{padding:10px 15px;
 .research-table tbody tr:last-child td {
   border-bottom: none;
 }
+
+/* ========================================
+   PROJECT NAVIGATION
+   ======================================== */
+
+.project-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+
+  padding: 0 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.project-nav a {
+  display: inline-block;
+  padding: 1.25rem 0;
+
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-nav a:hover {
+  color: #1e3a5f;
+}
+
+.project-nav a.active {
+  color: #1e3a5f;
+  font-weight: 600;
+  border-bottom-color: #1e3a5f;
+}
+
+/* Mobile navigation */
+
+@media (max-width: 600px) {
+  .project-nav {
+    justify-content: flex-start;
+    gap: 1.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .project-nav a {
+    font-size: 0.85rem;
+    padding: 1rem 0;
+    flex-shrink: 0;
+  }
+}
