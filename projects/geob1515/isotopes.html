@@ -94,10 +94,12 @@
   </p>
 
   <p>
-    The isotope record will also provide stratigraphic
-    context for developing an age-depth model using
-    published chronological constraints and reference
-    isotope records.
+    The isotope record was also used to investigate
+    the feasibility of constructing an age–depth model
+    using published chronological constraints and
+    the LR04 global benthic oxygen isotope stack.
+    This investigation ultimately highlighted
+    limitations in the available chronological data.
   </p>
 
   <p class="citation">
@@ -224,12 +226,301 @@
   </p>
 
   <p class="note">
-    Marine isotope stage assignments and chronological
-    interpretations will be evaluated separately
-    using published age constraints and an age-depth
-    model.
+    A preliminary age–depth model was investigated
+    using published chronological constraints and
+    oxygen isotope correlations. However, the
+    resulting chronology was not sufficiently
+    constrained to support reliable marine isotope
+    stage assignments throughout the core.
   </p>
 </section>
+
+<section id="chronological-investigation">
+  <h2>Chronological Investigation: Evaluating an Age–Depth Model</h2>
+
+  <p>
+    One of the challenges I encountered while studying GeoB1515-1
+    was determining the age of the sediment throughout the core.
+    Although previous research suggested that the core contained
+    a record extending back approximately 180,000 years, I needed
+    a more detailed chronology to investigate how mineralogical
+    changes related to past climate conditions.
+  </p>
+
+  <h3>Finding the Chronological Data</h3>
+
+  <p>
+    I began by searching published datasets and previous studies
+    of GeoB1515-1.
+  </p>
+
+  <p>
+    Several studies had already developed age models for portions
+    of the core, including Vidal et al. (1999), Lippold et al.
+    (2016), and Süfke et al. (2019). These studies used different
+    chronological approaches, including radiocarbon dating,
+    isotope correlations, and revised radiocarbon calibrations.
+  </p>
+
+  <p>
+    The most recent published chronology provided age estimates
+    for the upper 95 cm of the core, extending to approximately
+    30,400 years before present.
+  </p>
+
+  <p>
+    The challenge was extending that chronology through the
+    remaining 563 cm.
+  </p>
+
+  <h3>Attempting an Oxygen Isotope Alignment</h3>
+
+  <p>
+    To investigate the deeper sediments, I retrieved the
+    published planktonic oxygen isotope measurements for
+    GeoB1515-1 and compared them with the LR04 global benthic
+    oxygen isotope stack.
+  </p>
+
+  <p>
+    My initial plan was to use Python to identify corresponding
+    climatic transitions between the two records and construct
+    an age–depth relationship.
+  </p>
+
+  <p>
+    However, the two datasets measure somewhat different
+    environmental signals.
+  </p>
+
+  <p>
+    Planktonic foraminifera record conditions in the upper ocean,
+    where oxygen isotope values are influenced by temperature,
+    seawater composition, and global ice volume. Benthic
+    foraminifera record conditions in the deep ocean and provide
+    a different perspective on glacial–interglacial variability.
+  </p>
+
+  <p>
+    The original benthic isotope measurements used in the earlier
+    published age-model correlations were not available in the
+    datasets I could obtain.
+  </p>
+
+  <p>
+    Without those measurements, I couldn't directly reproduce
+    the original correlations.
+  </p>
+
+  <h3>Testing a Preliminary Age Model</h3>
+
+  <p>
+    I first reconstructed the published upper-core chronology
+    using linear interpolation between its reported age
+    assignments.
+  </p>
+
+  <p>
+    The resulting sedimentation rates ranged from approximately
+    2.4 to 5.0 cm per thousand years.
+  </p>
+
+  <p>
+    Using the average rate of 3.78 cm per thousand years, I then
+    extrapolated the chronology through the remainder of the
+    core. This produced an estimated bottom age of approximately
+    179,500 years.
+  </p>
+
+  <p>
+    Although this was consistent with the approximate age range
+    previously reported for the core, the agreement did not
+    independently validate the extrapolation.
+  </p>
+
+  <div class="chart-card">
+    <h3>Exploratory Age–Depth Models</h3>
+
+    <figure class="result-figure">
+      <img
+        src="images/geob1515_age_depth_comparison.png"
+        alt="Comparison of two exploratory age–depth scenarios for GeoB1515-1, showing the published upper-core chronology, constant-rate extrapolation, and a hypothetical isotope-alignment scenario."
+        loading="lazy"
+      >
+
+      <figcaption>
+        <strong>Figure: Comparison of preliminary age–depth
+        models for GeoB1515-1.</strong>
+        The upper 95 cm follows the published chronology of
+        Süfke et al. (2019). Below this depth, two exploratory
+        approaches were evaluated: a constant-sedimentation-rate
+        extrapolation and an alternative scenario incorporating
+        a hypothetical isotope correlation at 438 cm.
+        Both scenarios use the same extrapolated bottom age
+        of approximately 179.5 ka. Neither represents a
+        validated chronology for the deeper core.
+        The comparison illustrates how different assumptions
+        can produce plausible but non-unique age–depth
+        relationships.
+      </figcaption>
+    </figure>
+  </div>
+
+  <p>
+    I then used the provisional ages to compare the planktonic
+    isotope record with LR04.
+  </p>
+
+  <div class="chart-card">
+    <h3>Comparison with the LR04 Reference Stack</h3>
+
+    <figure class="result-figure">
+      <img
+        src="images/geob1515_lr04_alignment.png"
+        alt="Comparison of standardized GeoB1515-1 planktonic oxygen isotope measurements with the LR04 benthic oxygen isotope stack using a provisional age model."
+        loading="lazy"
+      >
+
+      <figcaption>
+        <strong>Figure: Preliminary oxygen isotope alignment
+        between GeoB1515-1 and LR04.</strong>
+        The GeoB1515-1 planktonic δ¹⁸O record is compared
+        with the LR04 global benthic δ¹⁸O stack
+        (Lisiecki &amp; Raymo, 2005).
+        Both records are standardized as z-scores to
+        facilitate comparison of their variability.
+        The dashed vertical line at approximately
+        30.4 ka marks the end of the published
+        upper-core chronology used in this investigation.
+        Older age assignments are provisional and
+        depend on the exploratory age–depth model.
+        Similarities between the records do not
+        independently validate the proposed alignment.
+      </figcaption>
+    </figure>
+  </div>
+
+  <p>
+    The overall correlation for the extrapolated section was
+    moderate (r = 0.401), but the agreement varied substantially
+    between intervals.
+  </p>
+
+  <div class="chart-card">
+    <h3>Correlation with the LR04 Reference Stack</h3>
+
+    <table class="chronology-table">
+      <thead>
+        <tr>
+          <th>Estimated age interval</th>
+          <th>Correlation with LR04</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>30.4–60 ka</td>
+          <td>0.318</td>
+        </tr>
+        <tr>
+          <td>60–90 ka</td>
+          <td>0.776</td>
+        </tr>
+        <tr>
+          <td>90–120 ka</td>
+          <td>0.779</td>
+        </tr>
+        <tr>
+          <td>120–150 ka</td>
+          <td>−0.099</td>
+        </tr>
+        <tr>
+          <td>150–180 ka</td>
+          <td>−0.098</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="citation">
+      Correlations calculated using provisional age assignments
+      for the GeoB1515-1 planktonic isotope record and the LR04
+      benthic isotope reference stack. These values do not
+      establish independent chronological control.
+    </p>
+  </div>
+
+  <p>
+    The relatively strong correlations between 60 and 120 ka
+    indicated similarities between portions of the two isotope
+    records. However, these similarities alone could not
+    establish that the records were correctly aligned in time.
+  </p>
+
+  <p>
+    The poor agreement in the older intervals also highlighted
+    the limitations of assuming a constant sedimentation rate
+    throughout the core.
+  </p>
+
+  <p>
+    I investigated possible isotope tie points, but without
+    additional independent chronological constraints, I couldn't
+    determine whether apparent similarities represented the same
+    climatic events.
+  </p>
+
+  <h3>What I Concluded</h3>
+
+  <p>
+    Ultimately, I was able to construct a provisional numerical
+    age–depth model, but not one that I considered sufficiently
+    constrained for detailed paleoceanographic interpretation.
+  </p>
+
+  <p>
+    The absence of the original benthic isotope dataset was an
+    important limitation, particularly because I wanted to
+    reproduce and evaluate the published correlations rather
+    than simply assign ages based on visual similarities.
+  </p>
+
+  <p>
+    The exercise also demonstrated why a mathematically
+    consistent age model isn't necessarily a geologically
+    reliable one.
+  </p>
+
+  <p>
+    For the mineralogical investigation, I therefore decided
+    to retain sediment depth as the primary reference rather
+    than assign specific ages to mineralogical changes using
+    an insufficiently validated chronology.
+  </p>
+
+  <p class="note">
+    The preliminary model remains useful for exploratory
+    analysis, but its extrapolated ages should not be
+    interpreted as established chronological constraints.
+    A more reliable chronology would require additional
+    independent age constraints or access to the original
+    benthic isotope measurements used in previous studies.
+  </p>
+
+  <p>
+    This investigation reinforced an important part of
+    scientific data analysis: recognizing when the available
+    evidence is insufficient to support a particular
+    interpretation is just as important as producing a result.
+  </p>
+
+  <p class="citation">
+    The publications and datasets used in this investigation
+    are documented on the
+    <a href="methods.html#references">Methods &amp; Data Sources</a>
+    page.
+  </p>
+
+</section>
+
 
 </main>
 
