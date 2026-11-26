@@ -965,3 +965,55 @@ select{padding:10px 15px;
     font-size: 0.85rem;
   }
 }
+
+
+/* Chronological investigation figures */
+
+#chronological-investigation .result-figure {
+  max-width: 850px;
+  margin: 30px auto;
+}
+
+#chronological-investigation .result-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#chronological-investigation .result-figure figcaption {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--muted, #617381);
+}
+
+/* Keep the tall age-depth figure narrower */
+
+/* Age-depth figure */
+
+#chronological-investigation .age-depth-figure {
+  width: 100%;
+  max-width: 750px;
+  margin: 30px auto;
+}
+
+#chronological-investigation .age-depth-figure img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#chronological-investigation .age-depth-figure figcaption {
+  max-width: 750px;
+  margin: 20px auto 0;
+}
+
+/* LR04 isotope alignment figure */
+
+#chronological-investigation .isotope-alignment-figure {
+  width: 100%;
+  max-width: 650px;
+  margin: 30px auto;
+}
